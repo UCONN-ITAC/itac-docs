@@ -75,7 +75,19 @@ nav = [
             "Training/1-Utility/Other Fuels.md", 
             "Training/1-Utility/Water.md", 
             ]},
-    ]}
+    ]}, 
+
+    {"Student Handbook" = [
+        {"Getting Paid" = [
+            "handbook/entering-hours.md", 
+            "handbook/mileage-reimbursement.md", 
+            ]},
+
+        {"Advancement" = [
+            "handbook/promotion.md", 
+            "handbook/certificate.md", 
+            ]},
+    ]},
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
