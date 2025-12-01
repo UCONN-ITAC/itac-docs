@@ -17,7 +17,7 @@ Because there are no required equipment purchases or additional labor required, 
 
 In addition to the [typical report requirements](../how-to.md) and the recommendation-specific savings and costs, the recommendation should include a table of all late fees charged. This table should list the months in the first column. There should then be another column for each utility account that includes late fees. At the bottom of the table, there should be rows for both the total for each account and the grand total. An example of this table formatting is available in the example recommendation. 
 
-## Example Recommendation
+## Examples
 
 [Example 1](../../assets/LateFeeSample_redacted.pdf)
 
