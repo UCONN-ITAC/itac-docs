@@ -77,6 +77,16 @@ nav = [
             ]},
     ]}, 
 
+    {"Equipment" = [
+        {"Dataloggers" = [
+            "equipment/bluetooth-datalogger.md", 
+            "equipment/usb-datalogger.md", 
+            ]},
+        {"Miscellaneous" = [
+            "equipment/fluke.md", 
+            ]},
+    ]}, 
+
     {"Student Handbook" = [
         {"Getting Paid" = [
             "handbook/entering-hours.md", 
