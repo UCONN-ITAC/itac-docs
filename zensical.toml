@@ -77,7 +77,7 @@ nav = [
             ]},
     ]}, 
 
-    {"Equipment" = [
+    {"Equipment Tutorials" = [
         {"Dataloggers" = [
             "equipment/bluetooth-datalogger.md", 
             "equipment/usb-datalogger.md", 
@@ -88,6 +88,8 @@ nav = [
     ]}, 
 
     {"Student Handbook" = [
+        "handbook/getting-started.md", 
+        "handbook/assessment-day.md",
         {"Getting Paid" = [
             "handbook/entering-hours.md", 
             "handbook/mileage-reimbursement.md", 
@@ -260,7 +262,7 @@ features = [
     # When sections are enabled, top-level sections are rendered as groups in
     # the sidebar for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-sections
-    "navigation.sections",
+    # "navigation.sections",
 
     # When tabs are enabled, top-level sections are rendered in a menu layer
     # below the header for viewports above 1220px, but remain as-is on mobile.
@@ -281,7 +283,7 @@ features = [
     # automatically updated with the active anchor as highlighted in the table
     # of contents.
     # https://zensical.org/docs/setup/navigation/#anchor-tracking
-    "navigation.tracking",
+    # "navigation.tracking",
 
     # When search highlighting is enabled and a user clicks on a search result,
     # Zensical will highlight all occurrences after following the link.
