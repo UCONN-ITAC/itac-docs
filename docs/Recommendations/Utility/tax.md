@@ -13,3 +13,9 @@ It is a safe bet that any manufacturer who is requesting an energy assessment fr
 Cost savings associated with not paying sales tax is calculated as the total of sales tax that the client paid in the 12 month period of utility bills provided. To identify these payments, the Utility Analysis sheet which outlines all of the utility bills of the client in Excel can be used. The sales tax paid on utility accounts is usually one of the last few lines of the bill before the total.
 
 **Important:** It is important that sales tax payments on **all** utility accounts are accounted for. Before finalizing calculations, verify that all accounts have been investigated for sales tax. Clients often have multiple electricity or gas accounts, as well as may pay tax on certain accounts but not others.
+
+For example, if the client paid $500 a month, for each of the 12 months in the utility analysis, their yearly savings from sales tax exemption would be $500 x 12 = **$6,000**. 
+
+### Payback Period
+
+For this recommendation the payback period is **immediate** as implementing this recommendation requires a simple clerical adjustment.
