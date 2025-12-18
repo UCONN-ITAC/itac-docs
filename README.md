@@ -6,12 +6,13 @@ The core of the website lives in the main folder: `docs/`. Any Markdown (`.md`) 
 
 ---
 
-# 📖 Table of Contents
+# Table of Contents
 
 * [I want to...](#i-want-to)
 * [Adding Documents](#adding-documents)
     * [Add a New Page](#add-a-new-page)
     * [Add a New Section (Group)](#add-a-new-section)
+    * [Add Images](#add-images)
 * [Learn to Use GitHub (with GitHub Desktop)](#learning-to-use-github-with-github-desktop)
 * [Learn to Use Markdown](#learning-to-use-markdown)
 
@@ -72,6 +73,22 @@ A **Section** is a high-level grouping that appears in the top bar and contains 
     > ```
 5.  **Add Pages to the Section.** You can now create additional `.md` files in the new folder (e.g., `hardware-support/request-new-laptop.md`) to build out the rest of your section.
 6.  **Commit and Publish.** Use GitHub Desktop to commit your changes and push them to the repository.
+
+## Add Images
+
+To keep the project organized, all images should be stored in a dedicated folder.
+
+### Step-by-Step
+
+1.  **Locate the images folder.** Inside `docs/`, find the folder named `ReferencePhotos/`.
+2.  **Upload your image.** Move your image file (PNG, JPG, or GIF) into that folder.
+3.  **Reference the image in Markdown.** Use the following syntax to display the image on your page:
+
+    ```markdown
+    ![Alternative text for screen readers](../ReferencePhotos/your-image-name.png)
+    ```
+
+    * **Tip:** Ensure the path matches where you saved the file. If your page is inside a subfolder, you usually need `../` to "go up" one level to find the ReferencePhotos folder.
 
 ---
 
