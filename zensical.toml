@@ -11,6 +11,12 @@
 repo_url = "https://github.com/UCONN-ITAC/itac-docs"
 edit_uri = "edit/main/docs/"
 
+extra_javascript = [
+    "javascripts/mathjax.js",
+    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+]
+
+
 
 # The site_name is shown in the page header and the browser window title
 #
@@ -359,3 +365,9 @@ toggle.name = "Switch to light mode"
 [project.extra]
 generator = false
 
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.superfences]
