@@ -182,9 +182,11 @@ First, we need to convert CCF to MMBtu. One CCF (hundred cubic feet) of natural 
 $$1 \text{ CCF} \approx 1.03 \text{ therms} \times 0.1 \frac{\text{MMBtu}}{\text{therm}} = 0.103 \text{ MMBtu}$$
 
 For electricity:
+
 $$\frac{\$0.12}{\text{kWh}} \times \frac{1 \text{ kWh}}{0.003412 \text{ MMBtu}} = \frac{\$35.17}{\text{MMBtu}}$$
 
 For natural gas:
+
 $$\frac{\$1.05}{\text{CCF}} \times \frac{1 \text{ CCF}}{0.103 \text{ MMBtu}} = \frac{\$10.19}{\text{MMBtu}}$$
 
 Natural gas is significantly cheaper per unit of energy in this example. However, this comparison assumes 100% efficiency for both systems. In practice, you must account for equipment efficiencies, which we cover in later training modules.
