@@ -74,12 +74,12 @@ nav = [
     ]},
 
     {"Training" = [
-        {"Module 1: Utility Analysis" = [
-            "Training/1-Utility/Introduction.md", 
-            "Training/1-Utility/Electricity.md", 
-            "Training/1-Utility/Natural Gas.md", 
-            "Training/1-Utility/Other Fuels.md", 
-            "Training/1-Utility/Water.md", 
+        {"Module 1: Foundaitons" = [
+            "Training/Module-1/Engineering-Economics.md", 
+            "Training/1-Utility/Power-and-Energy.md", 
+            "Training/1-Utility/Utilities.md", 
+            "Training/1-Utility/Technical-Writing.md", 
+            "Training/1-Utility/LaTeX.md", 
             ]},
     ]}, 
 
