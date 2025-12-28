@@ -85,7 +85,11 @@ nav = [
             ]},
 
         {"Module 2: Engineering Economics" = [
-            "Training/2-Engineering-Economics/Engineering-Economics.md",
+            "Training/2-Engineering-Economics/Introduction.md",
+            "Training/2-Engineering-Economics/Cash-Flows.md",
+            "Training/2-Engineering-Economics/TVM-and-NPV.md",
+            "Training/2-Engineering-Economics/Payback.md",
+            "Training/2-Engineering-Economics/Conclusion.md",
             ]},
 
         {"Module 3: Technical Writing" = [

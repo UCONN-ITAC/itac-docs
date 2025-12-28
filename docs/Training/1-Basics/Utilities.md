@@ -97,7 +97,7 @@ Rather than monthly bills based on metered consumption, facilities purchase fuel
 
     Fuel oil and propane are typically priced per gallon. For energy comparisons, you can convert to MMBtu using standard heating values:
 
-    - #2 Fuel Oil: ≈ 138,500 BTU/gallon ≈ 0.139 MMBtu/gallon
+    - \#2 Fuel Oil: ≈ 138,500 BTU/gallon ≈ 0.139 MMBtu/gallon
     - Propane: ≈ 91,500 BTU/gallon ≈ 0.092 MMBtu/gallon
 
 !!! example
@@ -105,10 +105,10 @@ Rather than monthly bills based on metered consumption, facilities purchase fuel
     A facility purchases 5,000 gallons of propane at $2.50/gallon. To compare the energy cost to natural gas:
 
     Total energy content:
-    $$5{,}000 \text{ gal} \times 0.092 \text{ MMBtu/gal} = 460 \text{ MMBtu}$$
+    $$ 5{,}000 \text{ gal} \times 0.092 \text{ MMBtu/gal} = 460 \text{ MMBtu} $$
 
     Cost per MMBtu:
-    $$\frac{\$2.50/\text{gal}}{0.092 \text{ MMBtu/gal}} = \$27.17/\text{MMBtu}$$
+    $$ \frac{\$2.50/\text{gal}}{0.092 \text{ MMBtu/gal}} = \$27.17/\text{MMBtu} $$
 
 !!! tip
 

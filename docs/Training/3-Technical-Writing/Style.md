@@ -22,7 +22,6 @@ Spell out numbers less than 10 when they appear in running text. Use numerals fo
 |---------|-----------|
 | The facility has three compressors. | The facility has 3 compressors. |
 | The system operates 12 hours per day. | The system operates twelve hours per day. |
-| We identified eight leaks. | We identified 8 leaks. |
 
 **Exception:** Always use numerals when presenting measured values, calculations, or technical specifications, regardless of size:
 
@@ -44,6 +43,10 @@ Report calculated values to a precision that reflects the accuracy of your input
 
 **Avoid false precision.** If your operating hours estimate is ±10%, reporting annual savings to the nearest kilowatt-hour is misleading.
 
+!!! Exception
+
+    Using significant figures is ideal. However, we often don't know the accuracy of our measurements as they come from un-calibrated devices. In these cases, it's acceptable to report numbers to a reasonable precision. This is usually the nearest kWh, USD, 0.1 kW, or 0.1 MMBtu. 
+
 ## Units
 
 ### Capitalization and Abbreviations
@@ -60,7 +63,7 @@ Use proper capitalization for all units. Units named after people are capitalize
 
 ### Spacing
 
-Insert a space between the number and the unit, except for degree symbols:
+Insert a space between the number and the unit, except for degree and percent symbols:
 
 | Correct | Incorrect |
 |---------|-----------|
@@ -156,11 +159,11 @@ Some calculations are trivial and should be described in a sentence rather than 
 
 **Examples (describe, do not show):**
 
-- "Total implementation cost is the sum of equipment cost ($8,500) and labor cost ($1,200), totaling $9,700."
+- "Total implementation cost is the sum of equipment cost (\$8,500) and labor cost (\$1,200), totaling \$9,700."
 - "Annual savings equal the difference between baseline cost and efficient case cost."
 - "The facility operates two shifts, five days per week, for 50 weeks per year, totaling 4,000 hours."
 
-Readers do not need to see $8,500 + $1,200 = $9,700$ written as a formal equation.
+Readers do not need to see $\$8,500 + \$1,200 = \$9,700$ written as a formal equation.
 
 ## Referencing the How-To Guide
 

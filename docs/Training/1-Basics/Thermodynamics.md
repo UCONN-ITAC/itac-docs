@@ -6,11 +6,11 @@
 
 The First Law of Thermodynamics is a statement of energy conservation: energy cannot be created or destroyed, only converted from one form to another. For any system, the energy entering must equal the energy leaving plus any accumulation within the system.
 
-$$\text{Energy In} = \text{Energy Out} + \text{Accumulation}$$
+$$ \text{Energy In} = \text{Energy Out} + \text{Accumulation}$$ 
 
 For steady-state processes (no accumulation), this simplifies to:
 
-$$\text{Energy In} = \text{Energy Out}$$
+$$ \text{Energy In} = \text{Energy Out}$$ 
 
 This fundamental principle allows us to analyze equipment performance and identify energy losses.
 
@@ -20,7 +20,7 @@ This fundamental principle allows us to analyze equipment performance and identi
 
 A boiler converts fuel energy into heat in steam or hot water. The energy balance is:
 
-$$\dot{Q}_{\text{fuel}} = \dot{Q}_{\text{output}} + \dot{Q}_{\text{losses}}$$
+$$ \dot{Q}_{\text{fuel}} = \dot{Q}_{\text{output}} + \dot{Q}_{\text{losses}}$$ 
 
 Where:
 
@@ -32,7 +32,7 @@ Where:
 
     A boiler burns natural gas at 20 MMBtu/hr input and produces steam carrying 16 MMBtu/hr of useful heat. The losses are:
 
-    $$\dot{Q}_{\text{losses}} = 20 - 16 = 4 \text{ MMBtu/hr}$$
+    $$ \dot{Q}_{\text{losses}} = 20 - 16 = 4 \text{ MMBtu/hr}$$ 
 
     These 4 MMBtu/hr leave primarily through hot flue gases, representing 20% of the fuel input.
 
@@ -40,7 +40,7 @@ Where:
 
 A chiller removes heat from a chilled water loop and rejects it to a condenser water loop or air. The energy balance includes electrical work input:
 
-$$\dot{Q}_{\text{evaporator}} + \dot{W}_{\text{compressor}} = \dot{Q}_{\text{condenser}}$$
+$$ \dot{Q}_{\text{evaporator}} + \dot{W}_{\text{compressor}} = \dot{Q}_{\text{condenser}}$$ 
 
 Where:
 
@@ -52,9 +52,9 @@ Where:
 
     A chiller provides 300 tons of cooling (1,200,000 BTU/hr) and draws 200 kW of electrical power. The condenser must reject:
 
-    $$\dot{Q}_{\text{condenser}} = 1{,}200{,}000 \text{ BTU/hr} + 200 \text{ kW} \times 3{,}412 \frac{\text{BTU/hr}}{\text{kW}}$$
+    $$ \dot{Q}_{\text{condenser}} = 1{,}200{,}000 \text{ BTU/hr} + 200 \text{ kW} \times 3{,}412 \frac{\text{BTU/hr}}{\text{kW}}$$ 
 
-    $$\dot{Q}_{\text{condenser}} = 1{,}200{,}000 + 682{,}400 = 1{,}882{,}400 \text{ BTU/hr}$$
+    $$ \dot{Q}_{\text{condenser}} = 1{,}200{,}000 + 682{,}400 = 1{,}882{,}400 \text{ BTU/hr}$$ 
 
     The cooling tower or air-cooled condenser must reject about 1.57 times the cooling load.
 
@@ -62,7 +62,7 @@ Where:
 
 In a heat exchanger, hot fluid transfers heat to cold fluid with no external work input. Assuming no heat loss to surroundings:
 
-$$\dot{m}_{\text{hot}} c_{p,\text{hot}} (T_{\text{hot,in}} - T_{\text{hot,out}}) = \dot{m}_{\text{cold}} c_{p,\text{cold}} (T_{\text{cold,out}} - T_{\text{cold,in}})$$
+$$ \dot{m}_{\text{hot}} c_{p,\text{hot}} (T_{\text{hot,in}} - T_{\text{hot,out}}) = \dot{m}_{\text{cold}} c_{p,\text{cold}} (T_{\text{cold,out}} - T_{\text{cold,in}})$$ 
 
 Where:
 
@@ -79,12 +79,12 @@ The heat lost by the hot fluid equals the heat gained by the cold fluid.
     Assuming water has $c_p = 1$ BTU/(lb·°F) and density of 8.34 lb/gal:
 
     Heat lost by hot water:
-    $$\dot{Q} = (10 \text{ GPM} \times 8.34 \text{ lb/gal}) \times 1 \times (180 - 120) = 5{,}004 \text{ BTU/min}$$
+    $$ \dot{Q} = (10 \text{ GPM} \times 8.34 \text{ lb/gal}) \times 1 \times (180 - 120) = 5{,}004 \text{ BTU/min}$$ 
 
     Heat gained by cold water:
-    $$5{,}004 = (8 \times 8.34) \times 1 \times (T_{\text{out}} - 60)$$
+    $$ 5{,}004 = (8 \times 8.34) \times 1 \times (T_{\text{out}} - 60)$$ 
 
-    $$T_{\text{out}} = 60 + \frac{5{,}004}{66.72} = 135°\text{F}$$
+    $$ T_{\text{out}} = 60 + \frac{5{,}004}{66.72} = 135°\text{F}$$ 
 
 ## Part 2: Enthalpy and Latent Heat
 
@@ -96,11 +96,11 @@ Enthalpy is the total heat content of a substance, including both sensible heat 
 
 **Sensible heat** changes temperature:
 
-$$Q = m c_p \Delta T$$
+$$ Q = m c_p \Delta T$$ 
 
 **Latent heat** changes phase at constant temperature:
 
-$$Q = m h_{fg}$$
+$$ Q = m h_{fg}$$ 
 
 Where:
 
@@ -126,7 +126,7 @@ When steam condenses, the resulting condensate is hot water (typically 180-212°
     If condensate is wasted, makeup water must be heated from 60°F to 280°F for the entire flow.
 
     Heat content of condensate (relative to 60°F):
-    $$Q = 10{,}000 \text{ lb/hr} \times 1 \text{ BTU/(lb·°F)} \times (280 - 60) = 2{,}200{,}000 \text{ BTU/hr}$$
+    $$ Q = 10{,}000 \text{ lb/hr} \times 1 \text{ BTU/(lb·°F)} \times (280 - 60) = 2{,}200{,}000 \text{ BTU/hr}$$ 
 
     Returning condensate saves 2.2 MMBtu/hr of boiler fuel input, worth approximately $20,000-30,000 annually.
 
@@ -139,10 +139,10 @@ Steam traps automatically discharge condensate while preventing live steam from 
     A steam trap fails open, venting steam at 100 psig. If the orifice is 1/8" diameter, approximately 25 lb/hr of steam escapes.
 
     Energy loss:
-    $$Q = 25 \text{ lb/hr} \times 970 \text{ BTU/lb} = 24{,}250 \text{ BTU/hr}$$
+    $$ Q = 25 \text{ lb/hr} \times 970 \text{ BTU/lb} = 24{,}250 \text{ BTU/hr}$$ 
 
     Annual energy waste at 8,000 operating hours:
-    $$24{,}250 \times 8{,}000 = 194 \text{ MMBtu/year}$$
+    $$ 24{,}250 \times 8{,}000 = 194 \text{ MMBtu/year}$$ 
 
     At $10/MMBtu natural gas, this single failed trap costs about $1,940/year.
 
@@ -155,26 +155,12 @@ Boilers require blowdown to remove dissolved solids that concentrate in the boil
     A boiler operates at 150 psig (366°F saturated temperature) with 5% blowdown rate on a 10,000 lb/hr steam load.
 
     Blowdown flow:
-    $$\dot{m}_{\text{blowdown}} = 10{,}000 \times 0.05 = 500 \text{ lb/hr}$$
+    $$ \dot{m}_{\text{blowdown}} = 10{,}000 \times 0.05 = 500 \text{ lb/hr}$$ 
 
     Heat content of blowdown water (relative to 60°F makeup):
-    $$Q = 500 \times 1 \times (366 - 60) = 153{,}000 \text{ BTU/hr}$$
+    $$ Q = 500 \times 1 \times (366 - 60) = 153{,}000 \text{ BTU/hr}$$ 
 
     Installing a blowdown heat exchanger to preheat makeup water can recover 60-70% of this energy.
-
-### Application: Psychrometrics in HVAC
-
-Air conditioning involves both sensible and latent heat. Cooling humid air requires removing both sensible heat (lowering dry-bulb temperature) and latent heat (condensing moisture).
-
-Total cooling load = Sensible load + Latent load
-
-The sensible heat ratio (SHR) is the fraction of total cooling that is sensible:
-
-$$\text{SHR} = \frac{\text{Sensible Load}}{\text{Total Load}}$$
-
-!!! tip
-
-    Dehumidification is energy-intensive because of water's high latent heat. This is why reducing outdoor air intake (and thus moisture infiltration) saves significant cooling energy in humid climates.
 
 ## Part 3: Efficiency Definitions
 
@@ -182,7 +168,7 @@ $$\text{SHR} = \frac{\text{Sensible Load}}{\text{Total Load}}$$
 
 Combustion efficiency measures how much of the fuel's chemical energy is transferred to the working fluid (steam or hot water) versus lost up the stack in flue gases.
 
-$$\eta_{\text{combustion}} = \frac{\text{Heat absorbed by steam/water}}{\text{Fuel energy input}}$$
+$$ \eta_{\text{combustion}} = \frac{\text{Heat absorbed by steam/water}}{\text{Fuel energy input}}$$ 
 
 !!! info "Typical Combustion Efficiencies"
 
@@ -201,10 +187,10 @@ Combustion efficiency decreases when:
     A boiler burns natural gas at 10 MMBtu/hr input. Combustion analysis shows 82% combustion efficiency.
 
     Useful heat delivered:
-    $$\dot{Q}_{\text{output}} = 10 \times 0.82 = 8.2 \text{ MMBtu/hr}$$
+    $$ \dot{Q}_{\text{output}} = 10 \times 0.82 = 8.2 \text{ MMBtu/hr}$$ 
 
     Stack losses:
-    $$\dot{Q}_{\text{stack}} = 10 - 8.2 = 1.8 \text{ MMBtu/hr}$$
+    $$ \dot{Q}_{\text{stack}} = 10 - 8.2 = 1.8 \text{ MMBtu/hr}$$ 
 
     Improving combustion efficiency to 85% would increase output by 0.3 MMBtu/hr (3.7% fuel savings).
 
@@ -212,7 +198,7 @@ Combustion efficiency decreases when:
 
 Thermal efficiency accounts for all heat losses from equipment, including combustion losses, radiation losses, and blowdown losses.
 
-$$\eta_{\text{thermal}} = \frac{\text{Net heat output to process}}{\text{Fuel energy input}}$$
+$$ \eta_{\text{thermal}} = \frac{\text{Net heat output to process}}{\text{Fuel energy input}}$$ 
 
 !!! tip
 
@@ -222,7 +208,7 @@ $$\eta_{\text{thermal}} = \frac{\text{Net heat output to process}}{\text{Fuel en
 
 System efficiency considers the entire system, including distribution losses, end-use efficiency, and utilization.
 
-$$\eta_{\text{system}} = \eta_{\text{generation}} \times \eta_{\text{distribution}} \times \eta_{\text{utilization}}$$
+$$ \eta_{\text{system}} = \eta_{\text{generation}} \times \eta_{\text{distribution}} \times \eta_{\text{utilization}}$$ 
 
 !!! example
 
@@ -232,7 +218,7 @@ $$\eta_{\text{system}} = \eta_{\text{generation}} \times \eta_{\text{distributio
     - Process utilization: 90% (some steam vented during startup/shutdown)
 
     Overall system efficiency:
-    $$\eta_{\text{system}} = 0.83 \times 0.85 \times 0.90 = 0.635 \text{ or } 63.5\%$$
+    $$ \eta_{\text{system}} = 0.83 \times 0.85 \times 0.90 = 0.635 \text{ or } 63.5\%$$ 
 
     This means only 63.5% of the fuel energy input actually performs useful work. The rest is lost at various stages.
 
@@ -277,7 +263,7 @@ In a heat exchanger, the minimum temperature difference between the hot and cold
     Exhaust air leaves a building at 75°F. Incoming outdoor air is at 20°F. A heat recovery ventilator can preheat the incoming air, but not to 75°F.
 
     With a 10°F approach temperature, the incoming air can be heated to:
-    $$T_{\text{preheat}} = 75 - 10 = 65°F$$
+    $$ T_{\text{preheat}} = 75 - 10 = 65°F$$ 
 
     You cannot recover the last 10°F of temperature difference without an impractically large heat exchanger. The heat content in that final 10°F remains in the exhaust stream.
 
@@ -292,7 +278,7 @@ Heat exchanger effectiveness is limited by:
 
 The effectiveness of a heat exchanger is defined as:
 
-$$\varepsilon = \frac{\text{Actual heat transferred}}{\text{Maximum possible heat transfer}}$$
+$$ \varepsilon = \frac{\text{Actual heat transferred}}{\text{Maximum possible heat transfer}}$$ 
 
 !!! info "Heat Exchanger Effectiveness"
 
@@ -314,11 +300,11 @@ The compressor work input is essential to maintain the temperature difference th
 
 Refrigeration efficiency is measured by COP:
 
-$$\text{COP} = \frac{\text{Cooling delivered}}{\text{Work input}}$$
+$$ \text{COP} = \frac{\text{Cooling delivered}}{\text{Work input}}$$ 
 
 The Second Law sets theoretical limits on COP based on operating temperatures. For cooling:
 
-$$\text{COP}_{\text{Carnot}} = \frac{T_{\text{cold}}}{T_{\text{hot}} - T_{\text{cold}}}$$
+$$ \text{COP}_{\text{Carnot}} = \frac{T_{\text{cold}}}{T_{\text{hot}} - T_{\text{cold}}}$$ 
 
 Where temperatures are in absolute units (Rankine or Kelvin).
 
@@ -327,7 +313,7 @@ Where temperatures are in absolute units (Rankine or Kelvin).
     An ideal refrigeration cycle operates between an evaporator at 40°F (500°R) and a condenser at 100°F (560°R).
 
     Maximum theoretical COP:
-    $$\text{COP}_{\text{Carnot}} = \frac{500}{560 - 500} = \frac{500}{60} = 8.33$$
+    $$ \text{COP}_{\text{Carnot}} = \frac{500}{560 - 500} = \frac{500}{60} = 8.33$$ 
 
     Real chillers achieve COP of 3-6, well below the Carnot limit due to real-world inefficiencies (compressor losses, pressure drops, heat transfer limitations).
 
