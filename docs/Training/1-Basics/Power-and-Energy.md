@@ -79,7 +79,9 @@ $$\text{kWh} = \text{kW} \times \text{hours}$$
 
 $$E = (7.2 \text{ kW})(8 \text{ h}) = 57.6 \text{ kWh}$$
 
-On utility bills, you pay for kWh consumed (consumption charges) and often for peak kW demand (demand charges). These are separate line items.
+!!! tip
+
+    On utility bills, you pay for kWh consumed (consumption charges) and often for peak kW demand (demand charges). These are separate line items.
 
 ### Summary of Electrical Units
 
@@ -113,7 +115,9 @@ In industrial settings, thermal energy quantities become very large. We use MMBt
 
 $$1 \text{ MMBtu} = 1{,}000{,}000 \text{ BTU} = 10^6 \text{ BTU}$$
 
-**Note on notation:** The "MM" comes from the Roman numeral system where M = 1,000, so MM = 1,000 × 1,000 = 1,000,000. You may also see this written as MBtu in some contexts, but MMBtu is standard in the energy industry.
+!!! info "MMBtu Notation"
+
+    The "MM" comes from the Roman numeral system where M = 1,000, so MM = 1,000 × 1,000 = 1,000,000. You may also see this written as MBtu in some contexts, but MMBtu is standard in the energy industry.
 
 ### MMBtu/hr: Industrial Thermal Power
 
@@ -189,6 +193,10 @@ For natural gas:
 
 $$\frac{\$1.05}{\text{CCF}} \times \frac{1 \text{ CCF}}{0.103 \text{ MMBtu}} = \frac{\$10.19}{\text{MMBtu}}$$
 
-Natural gas is significantly cheaper per unit of energy in this example. However, this comparison assumes 100% efficiency for both systems. In practice, you must account for equipment efficiencies, which we cover in later training modules.
+Natural gas is significantly cheaper per unit of energy in this example.
+
+!!! tip
+
+    This comparison assumes 100% efficiency for both systems. In practice, you must account for equipment efficiencies, which we cover in later training modules.
 
 

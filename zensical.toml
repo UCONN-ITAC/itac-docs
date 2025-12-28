@@ -74,13 +74,26 @@ nav = [
     ]},
 
     {"Training" = [
-        {"Module 1: Foundaitons" = [
-            "Training/Module-1/Engineering-Economics.md", 
-            "Training/Module-1/Power-and-Energy.md", 
-            "Training/Module-1/Utilities.md", 
-            "Training/Module-1/Technical-Writing.md", 
-            "Training/Module-1/LaTeX.md", 
+        {"Module 1: Basics" = [
+            "Training/1-Basics/Introduction.md",
+            "Training/1-Basics/Power-and-Energy.md",
+            "Training/1-Basics/Utilities.md",
+            "Training/1-Basics/Thermodynamics.md",
+            "Training/1-Basics/Heat-Transfer.md",
+            "Training/1-Basics/Fluids.md",
+            "Training/1-Basics/Conclusion.md",
             ]},
+
+        {"Module 2: Engineering Economics" = [
+            "Training/2-Engineering-Economics/Engineering-Economics.md",
+            ]},
+
+        {"Module 3: Technical Writing" = [
+            "Training/3-Technical-Writing/Technical-Writing.md",
+            "Training/3-Technical-Writing/Style.md",
+            "Training/3-Technical-Writing/LaTeX.md",
+            ]},
+
     ]}, 
 
     {"Equipment Tutorials" = [
@@ -371,3 +384,5 @@ generic = true
 [project.markdown_extensions.admonition]
 [project.markdown_extensions.pymdownx.details]
 [project.markdown_extensions.pymdownx.superfences]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.pymdownx.blocks.caption]

@@ -1,0 +1,3 @@
+# Introduction
+
+This module builds on the power and energy fundamentals from Module 1. Here, we take a deeper look at how AC power actually works, how electric motors convert electrical energy into mechanical work, and how mechanical power gets transmitted through belt systems. By the end of this module, you should be able to analyze motor-driven systems from the electrical input all the way through to the mechanical output.

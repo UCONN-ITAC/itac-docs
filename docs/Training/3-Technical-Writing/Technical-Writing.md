@@ -24,7 +24,7 @@ Every assessment recommendation follows the same narrative structure: here is a 
 
 Do not simply present data and leave interpretation to the reader. Draw conclusions. Make recommendations. Take a position and defend it.
 
-## Voice and Style
+## Voice
 
 ### Person and Perspective
 
