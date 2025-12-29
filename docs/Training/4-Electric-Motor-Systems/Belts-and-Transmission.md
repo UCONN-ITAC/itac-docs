@@ -130,21 +130,23 @@ V-belts should be replaced when they show visible damage, when tension cannot be
 
 This is a straightforward and cost-effective ITAC recommendation because notched V-belts use the same sheaves as traditional V-belts. The upgrade can happen at the next scheduled belt replacement with no additional hardware costs.
 
-For example, consider a 50 HP motor running 6,000 hours per year at $0.10/kWh, currently using traditional V-belts at 95% efficiency:
+!!! example
 
-Current annual energy cost for the belt drive losses:
+    Consider a 50 HP motor running 6,000 hours per year at $0.10/kWh, currently using traditional V-belts at 95% efficiency:
 
-$$P_{shaft} = 50 \text{ HP} \times 0.746 \text{ kW/HP} = 37.3 \text{ kW}$$
+    Current annual energy cost for the belt drive losses:
 
-$$P_{input,current} = \frac{37.3 \text{ kW}}{0.95} = 39.26 \text{ kW}$$
+    $$P_{shaft} = 50 \text{ HP} \times 0.746 \text{ kW/HP} = 37.3 \text{ kW}$$
 
-With notched V-belts at 97% efficiency:
+    $$P_{input,current} = \frac{37.3 \text{ kW}}{0.95} = 39.26 \text{ kW}$$
 
-$$P_{input,new} = \frac{37.3 \text{ kW}}{0.97} = 38.45 \text{ kW}$$
+    With notched V-belts at 97% efficiency:
 
-$$P_{savings} = P_{input,current} - P_{input,new} = 0.81~\text{kW}$$
+    $$P_{input,new} = \frac{37.3 \text{ kW}}{0.97} = 38.45 \text{ kW}$$
 
-$$E_{savings} = P_{savings} * \text{Operating Hours} = 0.81 * 6000 = 4,860~\text{kWh}$$
+    $$P_{savings} = P_{input,current} - P_{input,new} = 0.81~\text{kW}$$
+
+    $$E_{savings} = P_{savings} * \text{Operating Hours} = 0.81 * 6000 = 4,860~\text{kWh}$$
 
 
 

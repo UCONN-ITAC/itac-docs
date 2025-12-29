@@ -2,6 +2,10 @@
 
 ## Why Alternating Current?
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 1em;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube-nocookie.com/embed/c9gm_NL7KyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 Nearly all industrial facilities run on alternating current (AC) rather than direct current (DC). The practical reason is transmission efficiency: AC voltage can be stepped up or down using transformers, which allows utilities to transmit power at high voltages (reducing current and therefore line losses) and then step it down to usable levels at the facility. DC systems would require far more complex and expensive conversion equipment to achieve the same thing.
 
 In an AC system, voltage and current oscillate sinusoidally. In the United States, this oscillation occurs at 60 Hz, meaning the waveform completes 60 full cycles per second. The voltage you measure with a standard multimeter is the root-mean-square (RMS) value, which represents the equivalent DC voltage that would deliver the same power to a resistive load.
@@ -36,6 +40,10 @@ Alternatively, apparent power equals the product of RMS voltage and RMS current:
 $$S = V \times I$$
 
 ## Power Factor
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 1em;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube-nocookie.com/embed/Tv_7XWf96gg?start=535" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 Power factor (PF) is the ratio of real power to apparent power:
 
@@ -73,18 +81,23 @@ Capacitors can be installed at individual motors (local correction), at motor co
 
 The reactive power (kVAR) needed to correct from an initial power factor (PF₁) to a target power factor (PF₂) can be calculated as:
 
-$$kVAR = P \times (\tan(\cos^{-1}(PF_1)) - \tan(\cos^{-1}(PF_2)))$$
+$$Q_{correction} = P \times (\tan(\cos^{-1}(PF_1)) - \tan(\cos^{-1}(PF_2)))$$
 
 Where P is the real power in kW.
 
-For example, to correct a 100 kW load from 0.80 PF to 0.95 PF:
+!!! example
 
-$$kVAR = 100 \times (\tan(\cos^{-1}(0.80)) - \tan(\cos^{-1}(0.95)))$$
-$$kVAR = 100 \times (0.75 - 0.33) = 42 \text{ kVAR}$$
+    To correct a 100 kW load from 0.80 PF to 0.95 PF:
 
-**Caution:** Over-correction (installing too much capacitance) can create a leading power factor, which some utilities also penalize. Additionally, capacitors can interact with harmonic currents in the system to create resonance problems. A qualified engineer should review any significant power factor correction installation.
+    $$Q_{correction} = 100 \times (\tan(\cos^{-1}(0.80)) - \tan(\cos^{-1}(0.95)))$$
 
-## Demand vs. Consumption Revisited
+    $$Q_{correction} = 100 \times (0.75 - 0.33) = 42 \text{ kVAR}$$
+
+!!! warning
+
+    Over-correction (installing too much capacitance) can create a leading power factor, which some utilities also penalize. Additionally, capacitors can interact with harmonic currents in the system to create resonance problems. A qualified engineer should review any significant power factor correction installation.
+
+## Demand vs. Consumption
 
 With the electrical context established, we can now be more precise about demand and consumption:
 

@@ -16,3 +16,4 @@ By the end of this module, you should be able to:
 - Calculate simple payback period for projects with constant annual savings
 - Recognize when simple payback is appropriate and when more sophisticated analysis is needed
 - Explain why ITAC uses simple payback as the primary economic metric
+- Distinguish between lost-opportunity and retrofit recommendations and apply the correct cost basis for each

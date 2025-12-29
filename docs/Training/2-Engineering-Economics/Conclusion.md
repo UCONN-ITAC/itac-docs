@@ -12,6 +12,8 @@ This module established the economic framework for evaluating energy efficiency 
 
 **Payback Period:** Simple payback divides net implementation cost by net annual savings, assuming constant cash flows and ignoring the time value of money. It's easy to calculate, verify, and communicate—which is why ITAC uses it. For projects with short payback periods (under 3 years) and constant savings, simple payback adequately captures the economics. For complex projects with varying cash flows or long time horizons, standard payback or discounted payback may be more appropriate, though these are not reported in the ITAC database.
 
+**Lost-Opportunity vs Retrofit:** Recommendations fall into two categories based on timing. Retrofits replace working equipment and use the full implementation cost in economic analysis. Lost-opportunities coincide with planned equipment replacements or new construction and use only the incremental cost difference between standard and high-efficiency options. This distinction fundamentally changes both the economics and urgency of recommendations. Lost-opportunities typically have shorter payback periods and require faster decision-making because once standard equipment is installed, the efficiency opportunity disappears for the equipment's lifetime.
+
 ---
 
 ## Practice Questions

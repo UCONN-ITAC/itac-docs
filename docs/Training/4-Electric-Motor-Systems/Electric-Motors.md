@@ -46,38 +46,6 @@ Power factor also varies with load. An induction motor at full load might have a
 
 Identifying oversizing during an ITAC assessment involves comparing actual operating current to nameplate full load current. If a motor consistently runs at 50% or less of its rated current, it is a candidate for replacement with a smaller motor. However, replacing a motor solely for efficiency gains rarely makes economic sense unless the existing motor has failed and needs replacement anyway. The assessment recommendation should focus on "right-sizing" at the time of replacement.
 
-## Variable Frequency Drives
-
-A variable frequency drive (VFD) is a power electronic device that converts fixed-frequency AC input to variable-frequency AC output. By varying the frequency, the VFD controls the speed of an induction motor. This is *like* pulse-width modulation (PWM) that's seen in small DC circuits. 
-
-This capability is transformative for many applications because power consumption in centrifugal loads (fans and pumps) follows the affinity laws:
-
-$$\frac{Q_1}{Q_2} = \frac{n_1}{n_2}$$
-
-$$\frac{H_1}{H_2} = \left(\frac{n_1}{n_2}\right)^2$$
-
-$$\frac{P_1}{P_2} = \left(\frac{n_1}{n_2}\right)^3$$
-
-Where Q is flow, H is head (pressure), P is power, and n is rotational speed.
-
-The third relationship is the key insight: power varies with the **cube** of speed. Reducing fan speed by 20% reduces power consumption by nearly 50%. Compare this to traditional flow control methods like throttling with dampers or valves, which waste energy by creating artificial resistance.
-
-**VFD benefits:**
-
-1. **Energy savings.** Significant for any application where flow varies or where the system was designed for peak conditions that rarely occur.
-
-2. **Soft starting.** VFDs ramp up motor speed gradually, reducing mechanical stress and limiting inrush current. This can eliminate the need for reduced-voltage starters and extend equipment life.
-
-3. **Process control.** VFDs enable precise speed control for process optimization.
-
-**VFD considerations:**
-
-1. **Harmonics.** VFDs draw non-sinusoidal current from the utility, which can cause power quality issues for other equipment and may require harmonic filters.
-
-2. **Motor heating.** Standard motors rely on shaft-mounted fans for cooling. At reduced speeds, cooling airflow decreases while losses may not decrease proportionally. Motors running continuously at low speeds may require external cooling or derating.
-
-3. **Cable length.** VFDs produce high-frequency voltage spikes that can stress motor insulation, especially with long cable runs between drive and motor. Inverter-duty motors and proper cable selection may be required.
-
 ## Motor System Optimization
 
 A motor is part of a larger system that includes the electrical supply, the drive (if present), the motor itself, the mechanical transmission (couplings, belts, gearboxes), and the driven equipment. Optimizing only one component while ignoring the others leaves savings on the table.

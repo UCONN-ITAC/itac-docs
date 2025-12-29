@@ -2,52 +2,72 @@
 
 ## Module Summary
 
-This module established the fundamental knowledge base for all ITAC energy assessment work. You've learned to work fluently with both electrical and thermal units, interpret commercial utility bills, apply thermodynamic principles to analyze equipment, calculate heat transfer, and understand fluid mechanics principles that govern motor-driven systems.
+This module established the electrical and commercial fundamentals for all ITAC energy assessment work. You've learned to work fluently with both electrical and thermal units, understand AC power systems, and interpret commercial utility billing structures. These concepts form the foundation for analyzing equipment and identifying savings opportunities.
 
-### Key Takeaways by Topic
+### Key Takeaways
 
 **Power and Energy:** You learned the foundational units used throughout energy work: electrical power (kW) versus energy (kWh), thermal power (MMBtu/hr) versus energy (MMBtu), and the conversion factor linking them (1 kWh = 3,412 BTU). These units and conversions appear in every energy calculation you'll perform.
 
+**AC Power:** Nearly all industrial facilities use three-phase AC power for major equipment. Real power (kW) does useful work, reactive power (kVAR) establishes magnetic fields, and apparent power (kVA) is what the utility must supply. Power factor is the ratio of real to apparent power. Low power factor wastes electrical capacity and can result in utility penalties. Three-phase systems are more efficient than single-phase for motor-driven equipment because they deliver smoother power.
+
 **Utilities:** Commercial electricity billing involves both consumption charges (\$/kWh for energy used) and demand charges (\$/kW for peak power). Ratchet clauses can extend the impact of a single demand spike across many months. Power factor penalties charge facilities for inefficient use of electrical capacity. Natural gas billing is generally simpler (volume-based), while delivered fuels like propane and fuel oil require reconstructing consumption from delivery records.
-
-**Thermodynamics:** The First Law (energy balance) allows you to analyze equipment performance and identify losses. Latent heat dominates phase change processes, making steam systems efficient for heat transfer and making condensate return valuable. Efficiency definitions matter: combustion efficiency measures stack losses, thermal efficiency includes all equipment losses, and system efficiency accounts for distribution and utilization. The Second Law explains why you cannot recover all waste heat (temperature pinch limits heat exchangers) and why refrigeration requires work input (moving heat against its natural direction).
-
-**Heat Transfer:** Conduction through building envelopes and pipe insulation follows Q = A·ΔT/R, where higher R-values reduce heat loss. Convection heat transfer depends on surface area, temperature difference, and the convection coefficient; fouling reduces heat exchanger performance by adding thermal resistance. Radiation becomes significant at high temperatures (above 200°F) and follows the Stefan-Boltzmann Law with temperature to the fourth power.
-
-**Fluids:** Pressure drop in piping varies approximately with the inverse fifth power of diameter, making undersized piping extremely energy-intensive for compressed air and pumping systems. The affinity laws explain VFD savings: flow is proportional to speed, pressure to speed squared, and power to speed cubed. This cubic relationship means reducing fan or pump speed by 20% cuts power consumption by nearly 50%.
 
 ---
 
 ## Practice Questions
 
-### Question 1: Comparing Energy Sources
+### Question 1: Power and Energy Conversions
 
-A facility is evaluating whether to heat a process using electricity or natural gas. The process requires 15 MMBtu/hr of heat input. Electricity costs $0.10/kWh with an electric resistance heater (100% efficient). Natural gas costs $8.50/MMBtu with a boiler operating at 82% combustion efficiency.
+A facility operates a 150 HP electric motor at 90% motor efficiency and 85% load factor for 6,000 hours per year.
 
-**Part A:** Calculate the hourly operating cost for each option.
+**Part A:** Calculate the actual electrical power draw (kW) of the motor under these operating conditions.
 
-**Part B:** If the facility operates this process 5,000 hours per year, calculate the annual energy cost difference between the two options.
+**Part B:** Calculate the annual electricity consumption (kWh) for this motor.
 
-**Part C:** The electric utility charges $15/kW for demand. Calculate the monthly demand charge for the electric heating option.
+**Part C:** Convert the annual electrical consumption to thermal units (MMBtu).
 
-### Question 2: Building Envelope Analysis
+**Part D:** If electricity costs $0.12/kWh, calculate the annual energy cost for this motor.
 
-A facility has 2,500 ft² of wall area with R-13 insulation and 400 ft² of single-pane windows (R = 1). The facility is heated with natural gas at $10.50/MMBtu through a boiler with 78% thermal efficiency. The heating season averages a 40°F temperature difference between inside and outside for 4,000 hours per year.
+### Question 2: AC Power and Power Factor
 
-**Part A:** Calculate the heat loss rate (BTU/hr) through the walls and through the windows separately.
+A facility has the following electrical loads on a three-phase system:
+- Real power consumption: 800 kW
+- Reactive power consumption: 600 kVAR
 
-**Part B:** The facility is considering upgrading windows to double-pane (R = 3). Calculate the reduction in heat loss rate (BTU/hr) from this upgrade.
+**Part A:** Calculate the apparent power (kVA) being supplied.
 
-**Part C:** What percentage of the current envelope heat loss is through windows, despite windows representing only 14% of the envelope area?
+**Part B:** Calculate the power factor.
 
-### Question 3: Fan System VFD Application
+**Part C:** The utility penalizes power factor below 0.90 by billing demand charges by kVA instead of kW. How much does this penalty cost if demand charges are $18/kW?
 
-A centrifugal fan operates at 1,800 RPM and delivers 20,000 CFM of airflow while drawing 50 kW of electrical power.
+**Part D:** The facility installs 500 kVAR of power factor correction capacitors. Calculate the new power factor.
 
-**Part A:** Using the affinity laws, if the fan speed is reduced to 1,440 RPM (80% of original speed), calculate the new airflow rate (CFM).
+### Question 3: Utility Bill Analysis
 
-**Part B:** Calculate the new pressure developed by the fan at 1,440 RPM as a percentage of the original pressure.
+A manufacturing facility receives the following monthly electric bill:
+- Consumption: 450,000 kWh at $0.095/kWh
+- Peak demand: 820 kW at $18.50/kW
+- The facility has a 12-month ratchet clause at 80% of the highest demand
 
-**Part C:** Calculate the new power consumption (kW) at 1,440 RPM.
+**Part A:** Calculate this month's total electricity cost (consumption + demand).
 
-**Part D:** Explain why the power reduction percentage is much larger than the speed reduction percentage.
+**Part B:** The peak demand of 820 kW occurred during an unusual production run and is 15% higher than typical monthly peaks of 710 kW. Due to the ratchet clause, what is the minimum demand charge the facility will pay in each of the next 11 months?
+
+**Part C:** Calculate the total excess cost over the next 11 months due to this single demand spike (compared to if demand had been 710 kW).
+
+**Part D:** Suggest two strategies the facility could implement to avoid future demand spikes.
+
+### Question 4: Three-Phase Power Fundamentals
+
+A three-phase motor nameplate shows:
+- 50 HP
+- 460V
+- 3-phase
+- 60 Hz
+- Full load current: 62 A
+
+**Part A:** Using the three-phase power formula (P = √3 × V × I × PF), and assuming the motor operates at full load with 0.88 power factor, calculate the actual power draw in kW.
+
+**Part B:** Calculate the motor's efficiency at this operating point.
+
+**Part C:** Explain why three-phase power is preferred over single-phase for motors above 5 HP.
