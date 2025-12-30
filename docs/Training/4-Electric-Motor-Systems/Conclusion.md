@@ -18,7 +18,7 @@ This module covered electric motor systems, the dominant energy consumer in most
 
 ---
 
-## Review Questions
+## Practice Questions
 
 1. A three-phase 480V system has a line current of 50A and a power factor of 0.85. Calculate the real power, reactive power, and apparent power.
 
