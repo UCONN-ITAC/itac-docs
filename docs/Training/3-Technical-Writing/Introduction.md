@@ -13,6 +13,8 @@ By the end of this module, you should be able to:
 - Use active voice appropriately and understand when passive voice serves a purpose
 - Eliminate hedging language and vague quantifiers
 - Adapt your writing style to different audiences (executive summaries vs. technical sections)
+- Select appropriate graph types (line charts, bar charts, pie charts) based on data and purpose
+- Design effective visualizations that follow best practices and avoid common mistakes
 - Write effective figure and table captions that stand alone
 - Recognize and fix common technical writing pitfalls
 - Transform weak, vague recommendations into strong, actionable ones

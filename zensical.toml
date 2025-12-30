@@ -94,6 +94,7 @@ nav = [
         {"Module 3: Technical Writing" = [
             "Training/3-Technical-Writing/Introduction.md",
             "Training/3-Technical-Writing/Technical-Writing.md",
+            "Training/3-Technical-Writing/Graphs.md",
             "Training/3-Technical-Writing/Style.md",
             "Training/3-Technical-Writing/LaTeX.md",
             "Training/3-Technical-Writing/Conclusion.md",

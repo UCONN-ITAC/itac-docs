@@ -12,6 +12,8 @@ This module established the principles of effective technical writing for energy
 
 **Audience Awareness:** Executive summaries must be accessible to non-technical readers and focus on outcomes (cost savings, payback periods) rather than technical details. Technical sections can assume general engineering knowledge but must explain assumptions and methodology clearly enough for another engineer to reproduce your analysis. Adjust your language and level of detail to match the reader's background and needs.
 
+**Graph Selection:** Choose visualizations based on the type of data and argument you're making. Line charts show trends over time and continuous relationships. Bar charts enable direct comparison across discrete categories. Pie charts show parts of a whole but should be used sparingly—they're harder to interpret than bar charts and only work well with few categories. At ITAC, most reports use line charts (for time-series logger data and load profiles) and bar charts (for comparing savings, costs, or energy use by category). Every graph must be referenced in the body text, serve a clear purpose, and meet technical standards for axis labels, legends, and resolution.
+
 **Figures and Captions:** Every figure and table must support your argument and be referenced in the body text. Captions should be descriptive enough to stand alone—a reader skimming the report should understand what a figure shows without reading surrounding text. Weak captions just label ("Figure 3: Boiler data"); strong captions explain what the data reveals ("Figure 3: Boiler stack temperature and combustion efficiency measurements, showing efficiency drop from 82% to 76% as excess air increases").
 
 ---
@@ -64,4 +66,4 @@ Download [this file](../../assets/Module-3/Question-3-Data.csv) showing the late
 
 **Part B:** Create a graph of the data. Insert this graph into your document and provide a strong caption. 
 
-**Part C:** Write a paragraph discussing the late fees that references the table adn figure. 
+**Part C:** Write a paragraph discussing the late fees that references the table and figure. 
