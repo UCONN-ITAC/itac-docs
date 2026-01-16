@@ -170,7 +170,7 @@ extra_css = ["assets/stylesheets/extra.css"]
 # The path provided should be relative to the "docs_dir".
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
-extra_javascript = ["assets/javascript/extra.js"]
+#extra_javascript = ["assets/javascript/extra.js"]
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options
