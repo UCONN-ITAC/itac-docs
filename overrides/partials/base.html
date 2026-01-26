@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block skip_to_content %}
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const searchInput = document.querySelector('.md-search__input');
+      if (searchInput) {
+        searchInput.setAttribute("tabindex", "0");
+      }
+    });
+  </script>
+{% endblock %}

@@ -46,4 +46,3 @@ Please review the contribution guide, specifically the README file located towar
 # Older Versions
 
 Older versions of this website are available in the same repository as the documentation contribution guide. Use the commit history to locate previous versions if information has been removed or changed in error.
-
