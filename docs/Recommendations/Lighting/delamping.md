@@ -2,7 +2,7 @@
 
 Many facilities operate lighting fixtures in areas where illumination is not required or exceeds recommended levels. Turning off unnecessary fixtures or permanently removing (delamping) excess fixtures eliminates wasted energy while maintaining adequate lighting for the space.
 
-**ARC Code(s):** X.XXXX
+**ARC Code(s):** 2.7111, 2.7121, 2.7124
 
 ## Savings Calculation
 

@@ -2,7 +2,7 @@
 
 Oversized motors running at partial load operate at reduced efficiency and power factor, wasting electrical energy compared to properly-sized motors. When replacing failed motors or upgrading equipment, selecting motors sized appropriately for the actual load reduces both energy consumption and demand charges while improving power factor.
 
-**ARC Code(s):** X.XXXX
+**ARC Code(s):** 2.4132
 
 ## Savings Calculation
 

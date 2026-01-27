@@ -2,7 +2,7 @@
 
 Traditional V-belts lose energy through friction slip and internal flexing losses, typically operating at 93-95% efficiency. Upgrading to notched (cogged) V-belts improves power transmission efficiency to 97%, reducing electrical consumption on belt-driven fans, pumps, and conveyors while often extending belt service life.
 
-**ARC Code(s):** X.XXXX
+**ARC Code(s):** 2.4111
 
 ## Savings Calculation
 

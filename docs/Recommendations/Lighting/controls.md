@@ -2,7 +2,7 @@
 
 Interior lighting systems often operate continuously or on manual switches, consuming energy when spaces are unoccupied or when daylight provides adequate illumination. Installing occupancy sensors, daylight dimming controls, or networked lighting control systems reduces lighting energy consumption by automatically adjusting power based on occupancy and available daylight.
 
-**ARC Code(s):** X.XXXX
+**ARC Code(s):** 2.7133, 2.7134, 2.7135
 
 ## Savings Calculation
 

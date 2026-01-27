@@ -2,7 +2,7 @@
 
 Older lighting fixtures using incandescent, fluorescent, or high-intensity discharge (HID) lamps consume significantly more energy than modern LED fixtures to produce the same light output. Replacing inefficient fixtures with LED or other high-efficiency lighting reduces electrical consumption, cooling loads, and maintenance costs.
 
-**ARC Code(s):** X.XXXX
+**ARC Code(s):** 2.7142
 
 ## Savings Calculation
 
