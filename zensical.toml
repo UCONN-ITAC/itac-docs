@@ -84,6 +84,9 @@ nav = [
             "Recommendations/Lighting/controls.md",
             "Recommendations/Lighting/delamping.md",
             ]},
+        {"Miscellaneous" = [
+            "Recommendations/Miscellaneous/cool-roof.md",
+            ]},
     ]},
 
     {"Training" = [
