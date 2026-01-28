@@ -36,11 +36,11 @@ A facility is currently operating 5 identical manufacturing lines. Each line con
 
 Requirements:
 
-1. Create a recommendation for replacing the motor with a properly-sized unit.
+1. Create a recommendation for replacing the motor with a properly-sized unit of the same efficiency. 
 
 2. Create a recommendation for changing the standard V-belt to a notched V-belt at the next time where it's required to change the belt.
 
-3. Create a recommendation for changing the motor for a higher efficiency variant.
+3. Create a recommendation for changing the motor for a higher efficiency variant with the original HP.
 
 !!! note
 
@@ -56,7 +56,7 @@ Given Assumptions:
 
 - Replacement motor costs are given by this table:
 
-| HP | Standard Efficiency (90%) | Premium Efficiency (95%) |
+| HP | Minimum Code Requirement (90%) | Premium Efficiency (95%) |
 |-----|---------------------------|--------------------------|
 | 10 | $800 | $1,200 |
 | 25 | $1,400 | $1,900 |
