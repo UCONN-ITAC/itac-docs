@@ -23,20 +23,26 @@ Before diving into section-by-section review, verify these overarching elements:
 - [ ] **Recommendation reflects facility reality** based on assessment observations
 - [ ] **Length is appropriate** (maximum 2 pages; appendix for detailed calculations if needed)
 - [ ] **Tone is professional** and uses active voice
-- [ ] **No vendor-specific language** (or if unavoidable, 3+ options with disclaimer)
+- [ ] **No vendor-specific language** (if unavoidable, 3+ options with disclaimer)
 - [ ] **Utility incentives researched** and documented if applicable
 - [ ] **All figures referenced** in text and properly captioned
 - [ ] **Units are correct and consistent** throughout
+- [ ] **Correct variables** are used where needed
 
 !!! warning "Virtual Meeting Requirement"
 
     If you identify any of the following, schedule a virtual meeting with the author immediately:
 
     - Calculation errors or unreproducible results
+
     - Methodology that deviates from established docs/Recommendations/[category] guidance
+
     - Missing or incorrect data that affects savings estimates
+
     - Assumptions that don't match facility conditions observed during assessment
+
     - Incomplete baseline documentation
+
     - Cost estimates that appear significantly incorrect
 
 ## Section-by-Section Review
@@ -49,7 +55,7 @@ The Summary should be written last by the author, so it should synthesize inform
 
 - [ ] **Four sentences:** One summarizing each of the four main sections (Current Practices, Recommended Action, Anticipated Savings, Costs and Payback)
 - [ ] **Summary table present** and correctly formatted using the standard LaTeX template
-- [ ] **Summary table values match** detailed calculations in other sections
+- [ ] **Summary table values match** calculations in other sections
 - [ ] **Consumption savings** grouped correctly (all energy types under "Consumption Savings")
 - [ ] **Implementation cost** is the sum of all components (equipment + labor - incentives)
 - [ ] **Payback calculation** matches: (Implementation Cost) / (Annual Savings - Continuing Costs)
