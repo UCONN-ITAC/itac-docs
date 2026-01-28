@@ -1,4 +1,4 @@
-# Repair Compressed Air Leaks
+# Repair Compressed Air Leaks (Old Method)
 
 Compressed air leaks are a significant source of energy waste in industrial facilities. Leaks occur at connections, fittings, valves, and distribution system components, causing compressors to run more frequently or at higher loads to maintain system pressure. Repairing leaks reduces compressor energy consumption and demand.
 
