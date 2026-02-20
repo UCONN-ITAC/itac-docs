@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# Install Rooftop Unit (RTU) Retrofits
+# Rooftop Unit (RTU) Retrofits
 
 **ARC Code(s):** 2.7232 - Replace existing HVAC unit with high efficiency model
 
@@ -36,12 +36,16 @@ This same formula applies to IEER and SEER.
 **Effective full-load hours:**
 
 $$
-\text{EFLH}_{\text{Cooling}} = \frac{(\text{CDD} / 33.5) \times 24}{\text{IEER}}
+\text{EFLH}_{\text{Cooling}} = \frac{(\text{CDD} / 33.5) \times 24}{\text{EER}}
 $$
 
 $$
-\text{EFLH}_{\text{Heating}} = \frac{(\text{HDD} / 33.5) \times 24}{\text{HSFF}}
+\text{EFLH}_{\text{Heating}} = \frac{(\text{HDD} / 33.5) \times 24}{\text{COP}}
 $$
+
+!!! warn
+    Heating savings only apply in cases where the facility is heated using electric heat. The most common way this is done is using heat pumps. If they use resistive heating, the coefficient of performance (COP) is 1. 
+
 
 **Energy Savings:**
 
@@ -61,8 +65,10 @@ $$
 
 ## Anticipated Costs
 
-Implementation costs include equipment purchase, installation labor, removal of existing units, and any necessary electrical or structural modifications. Obtain quotes from HVAC contractors for accurate pricing.
+**Equipment:** Research high efficiency units to retrofit that have pricing available. Look for a unit that is the same size of the one that is being replaced. 
+
+**Installation:** We assume that rigging, installation, and commissioning takes approximately 30 hours per unit. Multiply this by the standard labor rate for high-skilled labor to determine labor costs. 
 
 !!! warning
-    RTU retrofits may qualify for utility rebates or efficiency incentives. Check with the local utility provider before finalizing cost estimates. Subtract any incentives from the implementation cost before calculating payback.
+    RTU retrofits usually qualify for utility rebates or efficiency incentives. Check with the local utility provider before finalizing cost estimates. Subtract any incentives from the implementation cost before calculating payback.
 
