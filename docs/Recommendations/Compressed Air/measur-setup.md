@@ -19,13 +19,27 @@ This calculator analyzes compressed air power consumption by day of week and hou
 
 <div style="margin: 15px 0;">
     <p style="font-size: 0.9em; color: var(--md-default-fg-color--light); margin-bottom: 10px;">
-        Upload a CSV file with DateTime in column 2 and Current in column 3.
+        Upload a CSV file containing a date-time column and a current (amps) column. You will select which columns to use after loading.
     </p>
     <input type="file" id="csvFileInput" accept=".csv" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: white; color: black;">
     <button onclick="loadCSV()" style="margin-left: 10px; padding: 8px 16px; background: #4051b5; color: white; border: none; border-radius: 4px; cursor: pointer;">Load Data</button>
 </div>
 
 <div id="fileInfo" style="margin: 10px 0; font-size: 0.9em; color: var(--md-default-fg-color--light);"></div>
+
+<div id="columnSelection" style="margin: 15px 0; padding: 15px; background: var(--md-default-bg-color); border-radius: 6px; display: none;">
+    <h4 style="margin-top: 0;">Step 1b: Select Columns</h4>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+        <div>
+            <label for="dateTimeColSelect" style="display: block; margin-bottom: 5px; font-weight: 500;">Date-Time Column:</label>
+            <select id="dateTimeColSelect" onchange="updateDateRangePreview()" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: white; color: black;"></select>
+        </div>
+        <div>
+            <label for="currentColSelect" style="display: block; margin-bottom: 5px; font-weight: 500;">Current (Amps) Column:</label>
+            <select id="currentColSelect" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: white; color: black;"></select>
+        </div>
+    </div>
+</div>
 
 <h3>Step 2: Enter System Parameters</h3>
 
@@ -139,44 +153,75 @@ function parseCSV(text) {
         csvData.push(row);
     }
 
-    const dateTimeCol = headers[1];
-    const currentCol = headers[2];
+    // Populate column selectors, defaulting to column 2 (datetime) and column 3 (current)
+    const dateTimeSelect = document.getElementById('dateTimeColSelect');
+    const currentSelect = document.getElementById('currentColSelect');
+    dateTimeSelect.innerHTML = '';
+    currentSelect.innerHTML = '';
+    headers.forEach((header, index) => {
+        const opt1 = document.createElement('option');
+        opt1.value = header; opt1.text = header;
+        if (index === 1) opt1.selected = true;
+        dateTimeSelect.appendChild(opt1);
 
-    // Show file info first
-    document.getElementById('fileInfo').innerHTML = `
-        <strong>✓ File loaded:</strong> ${csvData.length} data points<br>
-        <strong>DateTime Column:</strong> ${dateTimeCol} | <strong>Current Column:</strong> ${currentCol}
-    `;
+        const opt2 = document.createElement('option');
+        opt2.value = header; opt2.text = header;
+        if (index === 2) opt2.selected = true;
+        currentSelect.appendChild(opt2);
+    });
 
-    // Try to parse dates to determine date range
+    document.getElementById('columnSelection').style.display = 'block';
+    document.getElementById('fileInfo').innerHTML = `<strong>✓ File loaded:</strong> ${csvData.length} data points`;
+    updateDateRangePreview();
+}
+
+function updateDateRangePreview() {
+    const dateTimeCol = document.getElementById('dateTimeColSelect').value;
     try {
-        const dates = csvData.map(row => parseDateString(row[dateTimeCol]));
-        const minDate = new Date(Math.min(...dates));
-        const maxDate = new Date(Math.max(...dates));
+        const dates = csvData
+            .map(row => parseDateString(row[dateTimeCol]))
+            .filter(d => !isNaN(d.getTime()));
+
+        if (dates.length === 0) {
+            document.getElementById('fileInfo').innerHTML =
+                `<strong>✓ File loaded:</strong> ${csvData.length} data points<br>` +
+                `<span style="color: #e74c3c;">⚠ Could not parse dates from the selected column — check that the correct column is chosen.</span>`;
+            return;
+        }
+
+        const timestamps = dates.map(d => d.getTime());
+        const minDate = new Date(Math.min(...timestamps));
+        const maxDate = new Date(Math.max(...timestamps));
         const durationDays = (maxDate - minDate) / (1000 * 60 * 60 * 24);
 
-        document.getElementById('fileInfo').innerHTML += `<br>
-            <strong>Date Range:</strong> ${minDate.toLocaleDateString()} to ${maxDate.toLocaleDateString()} (${durationDays.toFixed(1)} days)
-        `;
+        document.getElementById('fileInfo').innerHTML =
+            `<strong>✓ File loaded:</strong> ${csvData.length} data points<br>` +
+            `<strong>Date Range:</strong> ${minDate.toLocaleDateString()} to ${maxDate.toLocaleDateString()} (${durationDays.toFixed(1)} days)`;
     } catch (error) {
         console.error('Error parsing dates:', error);
     }
 }
 
 function parseDateString(dateStr) {
-    // Format: MM/DD/YYYY HH:MM:SS
-    const parts = dateStr.split(' ');
-    const dateParts = parts[0].split('/');
-    const timeParts = parts[1].split(':');
+    if (!dateStr || dateStr.trim() === '') return new Date(NaN);
+    dateStr = dateStr.trim();
 
-    return new Date(
-        parseInt(dateParts[2]),           // year
-        parseInt(dateParts[0]) - 1,       // month (0-indexed)
-        parseInt(dateParts[1]),           // day
-        parseInt(timeParts[0]),           // hours
-        parseInt(timeParts[1]),           // minutes
-        parseInt(timeParts[2])            // seconds
-    );
+    // M/D/YYYY H:MM[:SS] — common US data logger format (e.g. 1/15/2026 14:04)
+    let m = dateStr.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})\s+(\d{1,2}):(\d{2})(?::(\d{2}))?/);
+    if (m) return new Date(+m[3], +m[1]-1, +m[2], +m[4], +m[5], +(m[6]||0));
+
+    // YYYY-MM-DD[THH:MM[:SS]] — ISO 8601 / Excel export
+    m = dateStr.match(/^(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})(?:[T\s](\d{1,2}):(\d{2})(?::(\d{2}))?)?/);
+    if (m) return new Date(+m[1], +m[2]-1, +m[3], +(m[4]||0), +(m[5]||0), +(m[6]||0));
+
+    // D-Mon-YYYY HH:MM[:SS] — e.g. 15-Jan-2026 14:04
+    const months = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+    m = dateStr.match(/^(\d{1,2})-([A-Za-z]{3})-(\d{4})(?:\s+(\d{1,2}):(\d{2})(?::(\d{2}))?)?/);
+    if (m && months[m[2].toLowerCase()] !== undefined)
+        return new Date(+m[3], months[m[2].toLowerCase()], +m[1], +(m[4]||0), +(m[5]||0), +(m[6]||0));
+
+    // Fallback: native browser Date parsing (handles RFC 2822, full ISO 8601, etc.)
+    return new Date(dateStr);
 }
 
 function analyzeWeeklyPattern() {
@@ -198,8 +243,13 @@ function analyzeWeeklyPattern() {
         return;
     }
 
-    const dateTimeCol = headers[1];
-    const currentCol = headers[2];
+    const dateTimeCol = document.getElementById('dateTimeColSelect').value;
+    const currentCol = document.getElementById('currentColSelect').value;
+
+    if (!dateTimeCol || !currentCol) {
+        alert('Please load a CSV file and select columns first');
+        return;
+    }
 
     // Initialize data structure: [day of week][hour] = array of power values
     hourlyByDayData = {};
