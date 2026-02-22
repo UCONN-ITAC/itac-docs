@@ -44,7 +44,7 @@ site_author = "Southern New England Industrial Training and Assessment Center"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2025 Southern New England Industrial Training and Assessment Center
+Copyright &copy; Southern New England Industrial Training and Assessment Center
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
@@ -139,15 +139,9 @@ nav = [
 
     ]}, 
 
-    {"Equipment Tutorials" = [
-        {"Dataloggers" = [
-            "equipment/bluetooth-datalogger.md", 
-            "equipment/usb-datalogger.md", 
-            ]},
-        {"Miscellaneous" = [
-            "equipment/fluke.md", 
-            ]},
-    ]}, 
+    {"PlotME" = [
+        "plotme/index.md",
+    ]},
 
     {"Student Handbook" = [
         "handbook/getting-started.md", 
