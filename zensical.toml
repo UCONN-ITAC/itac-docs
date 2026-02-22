@@ -139,6 +139,13 @@ nav = [
 
     ]}, 
 
+    {"Calculators" = [
+        "calculators/vsd-efficiency.md",
+        "calculators/leak-rate.md",
+        "calculators/cold-intake.md",
+        "calculators/heat-recovery.md",
+    ]},
+
     {"PlotME" = [
         "plotme/index.md",
     ]},
