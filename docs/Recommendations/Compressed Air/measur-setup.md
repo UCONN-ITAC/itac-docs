@@ -5,7 +5,198 @@ hide:
 
 # MEASUR Setup and Weekly Power Analysis
 
-This page provides tools for analyzing compressed air system power consumption patterns to identify operating schedules and calculate average demand profiles.
+MEASUR's compressed air module requires configuration across several tabs before running any simulation. This page documents what each setting requires and where to find the data, then provides an interactive power analysis tool for developing operating schedule inputs used across compressed air analyses.
+
+!!! note "Referenced Across Recommendations"
+    The MEASUR settings documented here apply to most compressed air recommendations in this section. Configure the tool once per facility and reuse the inputs across analyses.
+
+---
+
+## MEASUR Data Entry Reference
+
+### Assessment Basics
+
+The Assessment Basics tab establishes the fundamental settings for the simulation, including units, currency, and utility rate information.
+
+#### Utility Rates
+
+- **Electricity Cost ($/kWh):** Pulled directly from the utility analysis spreadsheet. This is the blended rate that accounts for all relevant charges on the facility's electric bill.
+- **Demand Cost ($/kW-month):** Also from the utility analysis spreadsheet. This reflects the demand charge component of the facility's rate structure.
+
+#### Other Settings
+
+- **Currency:** Default to $ (USD).
+- **Units of Measure:** Typically set to Imperial for domestic assessments.
+- **Emissions Result Unit:** Select tonne (Metric).
+
+!!! note "Emissions Results"
+    The carbon emissions section is not currently used in ITAC analyses. The Emissions Result Unit selection has no practical impact — select tonne (Metric) as a default and disregard the emissions output.
+
+---
+
+### System Information
+
+This tab captures global system parameters and environmental conditions.
+
+#### System Parameters
+
+- **Atmospheric Pressure:** Leave at the default of 14.7 psia unless the facility is at a significantly different elevation.
+- **Total Air Storage:** The total receiver volume in the system. Estimate this as half of the total physical receiver volume recorded in the site notes.
+
+!!! note "Total Air Storage Estimation"
+    Not all of the stored receiver volume participates in pressure regulation. Roughly half of the total physical volume is a reasonable working estimate of usable storage. Record the total receiver volume from site nameplates or notes and divide by two.
+
+#### Multi Compressor System Controls Method
+
+This dropdown determines how MEASUR models the sequencing of multiple compressors when more than one unit is present. The options are as follows:
+
+| Control Method | Description |
+|---|---|
+| Cascading Pressure | Compressors are assigned priority numbers and turn on/off based on system pressure thresholds. The most common method for systems without a central controller. |
+| Target Pressure Sequencer | A central sequencer targets a specific discharge pressure and brings compressors online or offline to maintain it. Used when facilities have a dedicated sequencing controller. |
+| Isentropic Efficiency | Models compressors based on their thermodynamic efficiency rather than specific control logic. Useful for high-level modeling when detailed control schemes are not known. |
+| Centrifugal Equal Capacity Ratio Load Sharing | Specific to centrifugal compressor systems where multiple units share load equally by adjusting inlet guide vanes to maintain the same capacity ratio. |
+| Base/Trim | One or more compressors run at full load (base), while a single trim compressor modulates to match varying demand. Common in well-designed systems. |
+
+!!! note "Most Common Selection"
+    For most ITAC assessments, **Cascading Pressure** or **Isentropic Efficiency** are the most commonly used options, depending on what is known about the system's control architecture.
+
+#### Carbon Emissions
+
+The carbon emissions fields (Zip code, eGRID Subregion, and Total Emission Output Rate) are not currently used in ITAC analyses. Leave these at their defaults.
+
+---
+
+### Compressor Inventory
+
+The Inventory tab is where you enter data for each individual compressor in the system. This is typically the most data-intensive section.
+
+!!! note "Compressor Type"
+    Almost every compressor encountered in the field is a **single stage lubricant-injected rotary screw** type.
+
+#### Nameplate Data
+
+??? note "Finding Nameplate Data"
+    Nameplate data for site compressors is stored in **Airtable** under the site equipment records. Look up the facility and navigate to the compressor entries to find motor HP, full load amps, and motor service factor.
+
+??? note "Finding CAGI Datasheets and Manufacturer Spec Sheets"
+    CAGI datasheets are standardized performance documents published by compressor manufacturers. To locate one:
+
+    - Search the compressor model number followed by "CAGI datasheet" (e.g., "Atlas Copco GA37 CAGI datasheet")
+    - Most manufacturers maintain a searchable repository on their website — use the model number to locate the correct sheet
+
+    The same search approach works for general manufacturer spec sheets (needed for blowdown time, motor design efficiency, etc. that may not appear on the CAGI sheet).
+
+| Field | Source |
+|---|---|
+| Compressor Type | Almost always "Single stage lubricant-injected rotary screw" for the facilities we assess. |
+| Motor Power (hp) | From the compressor nameplate or manufacturer spec sheet. |
+| Full Load Operating Pressure (psig) | From site notes. This is the operating pressure observed or reported during the assessment. |
+| Rated Capacity (acfm) | From the CAGI data sheet for that compressor model. |
+| Full Load Amps | From the compressor nameplate or the manufacturer's spec sheet. |
+| Total Package Input Power (kW) | From the CAGI data sheet. This is the total power draw at rated conditions. |
+
+#### Controls
+
+The control type describes how the compressor regulates its output to match demand. This information typically comes from the manufacturer's specifications or CAGI sheet.
+
+!!! note "Most Common Control Types"
+    The two most common control types by far are **Load/Unload** and **VFD (Variable Frequency Drive)**.
+
+| Control Type | Description |
+|---|---|
+| Load/Unload | The compressor loads (compresses air) when pressure drops below the cut-in point and unloads (runs but does not compress) when pressure exceeds the cut-out point. Very common in fixed-speed rotary screw compressors. |
+| VFD | A variable frequency drive adjusts motor speed to match demand in real time. Provides excellent part-load efficiency and is increasingly common in modern installations. |
+| Inlet Modulation without Unloading | An inlet valve throttles airflow to reduce output. The compressor remains loaded at all times, which makes it less efficient at part load. |
+| Inlet Modulation with Unloading | Combines inlet modulation with the ability to fully unload. Modulates down to a threshold, then unloads if demand continues to drop. |
+| Variable Displacement with Unloading | Uses a mechanism (such as a turn or poppet valve) to vary the compressor's displacement. Provides better part-load efficiency than inlet modulation. |
+| Start/Stop | The compressor motor starts and stops entirely based on pressure. Typically only used on smaller compressors due to motor wear concerns. |
+
+#### Design Details
+
+Most fields in the Design Details section come from the manufacturer's spec sheet, CAGI data sheet, or nameplate data. Key fields include:
+
+- **Blowdown Time:** From manufacturer specs. A default of 40 seconds is often reasonable if not available.
+- **Motor Design Efficiency:** From CAGI or manufacturer specs.
+- **Motor Service Factor:** From the nameplate. Typically 1.15 for most industrial motors.
+- **Full Unloaded Power % of Full Load:** From CAGI. Indicates how much power the compressor draws while unloaded, expressed as a percentage of full load power.
+
+#### Performance Points
+
+Performance points define how the compressor behaves at specific operating conditions. The data required depends on the control type.
+
+**For Load/Unload Compressors:**
+
+- **Full Load (cut-in):** The discharge pressure at which the compressor loads. This is the lower bound of the operating pressure band, taken from site notes or the compressor controller settings.
+- **Max Full Flow (cut-out):** The discharge pressure at which the compressor unloads. This is the upper bound.
+- **Airflow (acfm):** For both the Full Load and Max Full Flow points, use the same rated capacity value from the CAGI sheet.
+- **Power (kW):** Full load and max full flow power from CAGI.
+- **No Load (unloaded):** Discharge pressure, airflow (0 acfm), and power consumption while unloaded — all from CAGI.
+
+!!! note "Cut-Out Pressure"
+    If a specific cut-out pressure is not available, assume a 5 psi difference above the cut-in pressure.
+
+**For VFD Compressors:**
+
+Performance points come directly from the CAGI data sheet, which provides multiple operating points across the speed range — typically at 100%, 70%, and 40% capacity, plus the no-load condition.
+
+---
+
+### Day Types
+
+Day types group the facility's operating schedule into distinct patterns. For example, a facility that runs differently on weekdays versus weekends would have two day types.
+
+- Use the [Weekly Power Pattern Analyzer](#weekly-power-pattern-analyzer) below to determine the appropriate breakdown of operating days for each day type.
+- Most facilities will have two day types (e.g., Weekday and Weekend) unless they operate 24/7 with uniform demand, in which case a single day type with 365 operating days is appropriate.
+
+!!! warning "Day Type Total"
+    The total operating days across all day types must sum to 365.
+
+---
+
+### System Profile
+
+The System Profile defines how the compressors operate throughout each day type, including compressor ordering and power consumption at each time interval.
+
+- Profile data comes from the results of the [Weekly Power Pattern Analyzer](#weekly-power-pattern-analyzer) below.
+- The profile is typically set with a 1-hour data interval, with power values for each compressor at each hour of the day.
+- Compressor ordering is determined by the system's control method and the priority scheme observed or configured at the facility.
+
+??? note "Finding CT Monitoring Data"
+    Current transformer (CT) monitoring data is stored in **Teams** under the assessment folder for the facility. Locate the logged amperage export file from the monitoring equipment — this is the input file for the Weekly Power Pattern Analyzer below.
+
+---
+
+### End Uses
+
+The End Uses tab accounts for known air consumption in the system. The most important entry is the system leak rate.
+
+- **Day Type Leak Rate (acfm):** Enter the leak rate determined from the FLUKE acoustic imaging study. Enter this value for all day types.
+
+!!! warning "Leak Rate Applies to All Day Types"
+    Leaks are present regardless of the facility's production schedule and occur 24/7. Enter the leak rate for every day type, not just production days.
+
+Additional end uses can be added if specific pneumatic equipment consumption data is available, but the leak rate is the primary and most common entry in this section.
+
+---
+
+### Quick Reference: Data Sources
+
+| Data Point | Source |
+|---|---|
+| Electricity & Demand Rates | Utility analysis spreadsheet |
+| Total Air Storage | Site notes (estimate as half of physical receiver volume) |
+| Compressor Type | Field observation (almost always single stage lubricant-injected rotary screw) |
+| Full Load Operating Pressure | Site notes |
+| Rated Capacity, Package Input Power | CAGI data sheet |
+| Full Load Amps, Motor HP | Nameplate or manufacturer spec sheet |
+| Control Type | Manufacturer specs (Load/Unload and VFD most common) |
+| Design Details | CAGI, manufacturer specs, or nameplate |
+| Performance Points (Load/Unload) | Site notes for pressure band; CAGI for airflow and power |
+| Performance Points (VFD) | CAGI data sheet (multiple operating points) |
+| Day Types | Weekly Power Pattern Analyzer |
+| System Profile | Weekly Power Pattern Analyzer |
+| Leak Rate | FLUKE acoustic imaging study |
 
 ---
 
