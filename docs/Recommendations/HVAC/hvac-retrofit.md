@@ -30,7 +30,7 @@ $$
 This same formula applies to IEER and SEER.
 
 !!! note
-    Effective full-load hours (EFLH) accounts for the fact that HVAC equipment rarely operates at full capacity. The calculation uses climate data (cooling degree days) along with design temperatures to determine equivalent full-load operating hours.
+    When selecting an efficiency metric, prefer SEER2 first, then SEER, then EER based on availability. The same metric must be used for both the baseline and installed unit — do not mix and match.
 
 **Effective full-load hours:**
 
@@ -39,6 +39,9 @@ $$
 $$
 
 where $T_{\text{design,cool}}$ is the ASHRAE 1% cooling design dry-bulb temperature (°F) for the facility's location.
+
+!!! note
+    Effective full-load hours (EFLH) accounts for the fact that HVAC equipment rarely operates at full capacity. The calculation uses climate data (cooling degree days) along with design temperatures to determine equivalent full-load operating hours.
 
 **Energy Savings:**
 
