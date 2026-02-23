@@ -9,15 +9,14 @@ hide:
 
 ## Overview
 
-This measure involves retrofitting rooftop units (RTUs) with higher efficiency equipment. These upgrades significantly reduce both heating and cooling energy consumption, especially in older packaged systems operating without advanced controls.
+This measure involves retrofitting rooftop units (RTUs) with higher efficiency equipment. These upgrades significantly reduce cooling energy consumption, especially in older packaged systems operating without advanced controls.
 
 ## Required Information
 
 - Number of RTUs
 - Rated cooling capacity (Btu/hr or tons)
-- Rated heating capacity (Btu/hr)
-- Baseline and installed efficiency values: SEER, IEER, EER, HSFF, COP
-- ZIP code (for CDD and HDD)
+- Baseline and installed EER values
+- ZIP code (for CDD)
 - Electricity cost ($/kWh)
 
 ## Calculation Methodology
@@ -31,36 +30,32 @@ $$
 This same formula applies to IEER and SEER.
 
 !!! note
-    Effective full-load hours (EFLH) accounts for the fact that HVAC equipment rarely operates at full capacity. The calculation uses climate data (cooling degree days and heating degree days) along with equipment efficiency ratings to determine equivalent full-load operating hours.
+    Effective full-load hours (EFLH) accounts for the fact that HVAC equipment rarely operates at full capacity. The calculation uses climate data (cooling degree days) along with design temperatures to determine equivalent full-load operating hours.
 
 **Effective full-load hours:**
 
 $$
-\text{EFLH}_{\text{Cooling}} = \frac{(\text{CDD} / 33.5) \times 24}{\text{EER}}
+\text{EFLH}_{\text{Cooling}} = \frac{\text{CDD} \times 24}{T_{\text{design,cool}} - 65}
 $$
 
-$$
-\text{EFLH}_{\text{Heating}} = \frac{(\text{HDD} / 33.5) \times 24}{\text{COP}}
-$$
-
-!!! warn
-    Heating savings only apply in cases where the facility is heated using electric heat. The most common way this is done is using heat pumps. If they use resistive heating, the coefficient of performance (COP) is 1. 
-
+where $T_{\text{design,cool}}$ is the ASHRAE 1% cooling design dry-bulb temperature (°F) for the facility's location.
 
 **Energy Savings:**
 
 $$
-\text{Cooling Energy Savings (kWh)} = \text{Capacity}_{\text{cooling}} \times \text{EFLH}_{\text{Cooling}} \times \left(\frac{1}{\text{EER}_b} - \frac{1}{\text{EER}_{\text{new}}}\right)
+\Delta \text{kWh}_C = \text{CAP}_C \times \left(\frac{1}{\text{EER}_b} - \frac{1}{\text{EER}_i}\right) \times \frac{1}{1000} \times \text{EFLH}_C
 $$
 
+**Peak Demand Savings:**
+
 $$
-\text{Heating Energy Savings (kWh)} = \text{Capacity}_{\text{heating}} \times \text{EFLH}_{\text{Heating}} \times \left(\frac{1}{\text{COP}_b} - \frac{1}{\text{COP}_{\text{new}}}\right)
+\Delta \text{kW}_{\text{Summer}} = \frac{\Delta \text{kWh}_C}{\text{EFLH}_C} \times 0.42
 $$
 
 **Cost Savings:**
 
 $$
-\text{Annual Savings (\$)} = (\text{Cooling Savings} + \text{Heating Savings}) \times \text{Electricity Cost}
+\text{Annual Savings (\$)} = \Delta \text{kWh}_C \times \text{Electricity Cost}
 $$
 
 ## Anticipated Costs
@@ -71,4 +66,21 @@ $$
 
 !!! warning
     RTU retrofits usually qualify for utility rebates or efficiency incentives. Check with the local utility provider before finalizing cost estimates. Subtract any incentives from the implementation cost before calculating payback.
+
+## Design Temperature Reference
+
+The following representative design temperatures are from the ENERGY STAR County-Level Design Temperature Reference Guide (ASHRAE 2013 Handbook of Fundamentals).
+
+| Location (representative) | 1% Cooling (°F) | Cooling ΔT |
+|---|---|---|
+| CT, Hartford Co. | 89 | 24 |
+| CT, Fairfield Co. | 85 | 20 |
+| CT, New London Co. | 85 | 20 |
+| MA, Suffolk Co. (Boston) | 91 | 26 |
+| RI, Providence Co. | 89 | 24 |
+| NH, Hillsborough Co. | 90 | 25 |
+| VT, Chittenden Co. (Burlington) | 87 | 22 |
+| ME, Cumberland Co. (Portland) | 86 | 21 |
+| NY, Albany Co. | 90 | 25 |
+| NY, New York Co. (Manhattan) | 92 | 27 |
 
