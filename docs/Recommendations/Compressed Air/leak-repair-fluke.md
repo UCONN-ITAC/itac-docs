@@ -22,12 +22,8 @@ $$
 Where:
 
 - $Q_{\text{leaks}}$ = total leak flow rate repaired (CFM)
-- $H$ = annual compressor operating hours (hrs/yr)
-- $P_{\text{specific}}$ = compressor specific power (kW per 100 CFM), from CAGI datasheet loaded values:
-
-$$
-P_{\text{specific}} = \frac{P_{\text{loaded}} \times 100}{Q_{\text{loaded}}}
-$$
+- $H$ = annual leaking hours (hrs/yr)
+- $P_{\text{specific}}$ = compressor specific power (kW per 100 CFM), from CAGI datasheet loaded values
 
 ### Peak Demand Savings
 
@@ -90,3 +86,4 @@ Typical payback for compressed air leak repair ranges from **6 months to 1.5 yea
 In addition to the [typical report requirements](../how-to.md), the recommendation must include:
 
 - **A leak image** — at least one acoustic imager screenshot showing a detected leak with the CFM reading visible. This documents the detection method and supports the reported leak rates.
+

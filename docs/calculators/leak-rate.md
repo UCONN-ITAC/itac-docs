@@ -26,8 +26,8 @@ Use this calculator to automatically determine leak rates from compressor power 
     </p>
     <div style="max-width: 300px;">
         <label for="systemVoltage" style="display: block; margin-bottom: 5px; font-weight: 500;">System Voltage (V):</label>
-        <input type="number" id="systemVoltage" placeholder="480" step="1" value="480" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: white; color: black;">
-        <p style="font-size: 0.85em; color: var(--md-default-fg-color--light); margin-top: 5px;">Common values: 208V, 240V, 480V, 600V</p>
+        <input type="number" id="systemVoltage" placeholder="460" step="1" value="460" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: white; color: black;">
+        <p style="font-size: 0.85em; color: var(--md-default-fg-color--light); margin-top: 5px;">Common values: 208V, 460V, 600V</p>
     </div>
 </div>
 
