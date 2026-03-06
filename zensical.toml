@@ -44,7 +44,7 @@ site_author = "Southern New England Industrial Training and Assessment Center"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2025 Southern New England Industrial Training and Assessment Center
+Copyright &copy; Southern New England Industrial Training and Assessment Center
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
@@ -68,6 +68,7 @@ nav = [
         {"Compressed Air" = [
             "Recommendations/Compressed Air/measur-setup.md",
             "Recommendations/Compressed Air/leak-repair.md",
+            "Recommendations/Compressed Air/leak-repair-fluke.md",
             "Recommendations/Compressed Air/setpoint.md",
             "Recommendations/Compressed Air/high-eff.md",
             "Recommendations/Compressed Air/cold-intake.md",
@@ -139,15 +140,16 @@ nav = [
 
     ]}, 
 
-    {"Equipment Tutorials" = [
-        {"Dataloggers" = [
-            "equipment/bluetooth-datalogger.md", 
-            "equipment/usb-datalogger.md", 
-            ]},
-        {"Miscellaneous" = [
-            "equipment/fluke.md", 
-            ]},
-    ]}, 
+    {"Calculators" = [
+        "calculators/vsd-efficiency.md",
+        "calculators/leak-rate.md",
+        "calculators/cold-intake.md",
+        "calculators/heat-recovery.md",
+    ]},
+
+    {"PlotME" = [
+        "plotme/index.md",
+    ]},
 
     {"Student Handbook" = [
         "handbook/getting-started.md", 
@@ -373,18 +375,9 @@ features = [
 # - https://zensical.org/docs/setup/colors/
 # ----------------------------------------------------------------------------
 [[project.theme.palette]]
-scheme = "default"
-primary = "indigo"
-accent = "indigo"
-toggle.icon = "lucide/sun"
-toggle.name = "Switch to dark mode"
-
-[[project.theme.palette]]
 scheme = "slate"
 primary = "indigo"
 accent = "indigo"
-toggle.icon = "lucide/moon"
-toggle.name = "Switch to light mode"
 
 # ----------------------------------------------------------------------------
 # In the "font" subsection you can configure the fonts used. By default, fonts

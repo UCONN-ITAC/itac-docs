@@ -107,3 +107,44 @@
 .md-sidebar--secondary {
   display: none !important;
 }
+
+/* ==========================================================================
+   UCONN ITAC BRAND COLORS  hsl(222, 99%, L)
+   ========================================================================== */
+
+/* Override MkDocs Material primary/accent CSS variables */
+:root,
+[data-md-color-primary="indigo"],
+[data-md-color-accent="indigo"] {
+  --md-primary-fg-color:        hsl(222, 99%, 40%);
+  --md-primary-fg-color--light: hsl(222, 99%, 55%);
+  --md-primary-fg-color--dark:  hsl(222, 99%, 28%);
+  --md-accent-fg-color:         hsl(222, 99%, 55%);
+  --md-accent-fg-color--transparent: hsla(222, 99%, 55%, 0.1);
+  --md-typeset-a-color:         hsl(222, 99%, 45%);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color:         hsl(222, 99%, 65%);
+  --md-accent-fg-color:         hsl(222, 99%, 65%);
+}
+
+/* Active nav link in sidebar */
+.md-nav__link--active,
+.md-nav__link--active:focus,
+.md-nav__link--active:hover {
+  color: hsl(222, 99%, 40%) !important;
+}
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__link--active:focus,
+[data-md-color-scheme="slate"] .md-nav__link--active:hover {
+  color: hsl(222, 99%, 65%) !important;
+}
+
+/* Hover state for all nav links */
+.md-nav__link:hover {
+  color: hsl(222, 99%, 45%) !important;
+}
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: hsl(222, 99%, 68%) !important;
+}

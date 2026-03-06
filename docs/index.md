@@ -1,5 +1,8 @@
 ---
-icon: lucide/rocket
+template: home.html
+hide:
+  - navigation
+  - toc
 ---
 # Introduction
 
