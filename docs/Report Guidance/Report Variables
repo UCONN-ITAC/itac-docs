@@ -1,0 +1,106 @@
+---
+hide:
+  - toc
+---
+
+# Report Variables
+
+The report variables are found under **Variables** → **Report-Variables.tex** in the LaTeX sidebar. This file centralizes all the inputs that populate the cover page, and executive summary. Fill everything out here and it propagates automatically throughout the report.
+
+The variables are organized into three blocks.
+
+---
+
+## Report and Students
+
+These variables populate part of the **cover page** and part of the **Facility Overview** of the report.
+
+```latex
+\newcommand{\ReportNumber}{--}
+\newcommand{\VisitDate}{--}
+\newcommand{\StudentLead}{--}
+\newcommand{\SafetyLead}{--}
+\providecommand{\StudentList}{Student 1, Student 2, Student 3}
+\newcommand{\StudentRows}{%
+    Student 1 \\
+    & Student 2 \\
+    & Student 3 %
+}
+```
+
+| Variable | What to enter |
+|---|---|
+| `\ReportNumber` | The report number assigned to this assessment |
+| `\VisitDate` | Date of the on-site assessment |
+| `\StudentLead` | The student assigned as lead for this assessment — typically the person filling out the report |
+| `\SafetyLead` | The student assigned as safety lead |
+| `\StudentList` | Comma-separated list of **all** students who attended, including the student lead and safety lead (used in the Facility Overview closing sentence) |
+| `\StudentRows` | All attending students **except** the student lead and safety lead, each on its own line (used in the cover page student table) |
+
+ "StudentList vs. StudentRows"
+    These two variables look similar but are used in different places and contain different people:
+
+   **`\StudentList`** — everyone who attended, including student lead and safety lead. Used in the Facility Overview paragraph.
+   
+   **`\StudentRows`** — everyone *except* the student lead and safety lead. Used in the cover page table, where the lead and safety lead already appear in their own labeled rows.
+
+Omitting the student lead or safety lead from `\StudentList`, or accidentally including them in `\StudentRows`, will cause incorrect names to appear on the cover page.
+
+
+---
+
+## Summary Card Variables
+
+These variables populate the **cover page** (Report No., Assessment Date, Location, SIC, NAICS) and the **executive summary**. The values are typically found in the **assessment request form** for the facility, located in the Teams folder.
+
+```latex
+\newcommand{\PlantLocation}{--}
+\newcommand{\PlantSIC}{--}
+\newcommand{\PlantNAICS}{--}
+\newcommand{\PlantSquareFeet}{--}
+\newcommand{\PlantPersonnel}{--}
+\newcommand{\PlantOperationDays}{--}
+\newcommand{\PlantOperationWeeks}{--}
+\newcommand{\PlantOperationHours}{--}
+\newcommand{\PlantEnergySources}{--}
+\newcommand{\PlantAnnualSales}{--}
+```
+
+| Variable | What to enter |
+|---|---|
+| `\PlantLocation` | City and state of the facility (no street address) |
+| `\PlantSIC` | Standard Industrial Classification code |
+| `\PlantNAICS` | North American Industry Classification System code |
+| `\PlantSquareFeet` | Total facility floor area in square feet |
+| `\PlantPersonnel` | Number of employees at the facility |
+| `\PlantOperationDays` | Operating days per week |
+| `\PlantOperationWeeks` | Operating weeks per year |
+| `\PlantOperationHours` | Operating hours per day |
+| `\PlantEnergySources` | Energy sources used at the facility (e.g., *Electricity, Natural Gas*) |
+| `\PlantAnnualSales` | Annual sales figure for the facility |
+
+---
+
+## Overall Recommendation Variables
+
+
+These variables are filled in **after the report is complete**, once all recommendations have been written and their savings calculated. They feed into the **executive summary** and the totals row of the **Summary of Recommendations** table.
+
+```latex
+\newcommand{\TotalRecImplementation}{--}
+\newcommand{\TotalRecSavings}{--}
+\newcommand{\TotalkWhSavings}{--}
+\newcommand{\TotalkWSavings}{--}
+\newcommand{\TotalGasSavings}{--}
+```
+
+| Variable | What to enter |
+|---|---|
+| `\TotalRecImplementation` | Total estimated implementation cost across all recommendations ($) |
+| `\TotalRecSavings` | Total estimated annual cost savings across all recommendations ($/yr) |
+| `\TotalkWhSavings` | Total annual electricity savings across all recommendations (kWh/yr) |
+| `\TotalkWSavings` | Total peak demand savings across all recommendations (kW-months) |
+| `\TotalGasSavings` | Total annual natural gas savings across all recommendations (therms/yr or MMBtu/yr, consistent with the report) |
+
+**Fill these in last!**
+    Do not estimate or partially fill in these totals during the writing process. Complete all individual recommendations first, then sum the values and enter them here. Entering preliminary numbers risks leaving incorrect totals in the final report.
