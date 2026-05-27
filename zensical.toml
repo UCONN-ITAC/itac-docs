@@ -161,7 +161,7 @@ nav = [
     {"Report Guidance" = [
         "Report Guidance/facility-overview.md",
         "Report Guidance/process.md",
-        "Report Guidance/best-practices.md",
+        {"Best practice" = "Report Guidance/best-practices.md"},
         "Report Guidance/major-consumers.md",
         "Report Guidance/utility-analysis.md",
     ]},
