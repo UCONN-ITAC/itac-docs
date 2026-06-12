@@ -164,6 +164,7 @@ nav = [
         {"Best practice" = "Report Guidance/best-practices.md"},
         "Report Guidance/major-consumers.md",
         "Report Guidance/utility-analysis.md",
+        "Report Guidance/report-variables.md",
     ]},
 
     {"Student Handbook" = [
