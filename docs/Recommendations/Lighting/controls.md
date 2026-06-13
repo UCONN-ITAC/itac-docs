@@ -13,6 +13,8 @@ Interior lighting systems often operate continuously or on manual switches, cons
 - 2.7134 (Use Photocell Controls)
 - 2.7135 (Install Occupancy Sensors)
 
+---
+
 ## Savings Calculation
 
 Energy savings from lighting controls result from reduced operating hours when spaces are unoccupied and reduced power consumption when daylight or demand-based controls lower light output. The magnitude of savings depends on the control type, space characteristics, occupancy patterns, and availability of natural daylight.
@@ -40,7 +42,6 @@ where:
 | No lighting controls | 0.0 |
 | Occupancy sensors | 0.24 |
 
-
 ### Annual Demand Savings
 
 Peak demand savings:
@@ -61,6 +62,7 @@ where:
 
 - $\text{CF}_{\text{winter}}$ = winter coincidence factor (0.172 for manufacturing facilities)
 
+---
 
 ## Anticipated Costs
 

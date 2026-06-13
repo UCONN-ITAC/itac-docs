@@ -14,6 +14,8 @@ Many facilities operate lighting fixtures in areas where illumination is not req
 - 2.7121 (Utilize Daylight instead of Artificial Light)
 - 2.7124 (Make a Practice of Turning Off Lights When Not Needed)
 
+---
+
 ## Savings Calculation
 
 Energy savings from turning off or removing unnecessary lighting result from eliminating power consumption in over-lit areas or unneeded locations. 
@@ -62,6 +64,8 @@ Important assumptions to state in the analysis:
 !!! warning "Illumination Level Verification"
 
     Before recommending fixture removal or delamping, verify that remaining fixtures will provide adequate light levels for the space's tasks and activities. Use a light meter to measure current illumination levels (in foot-candles or lux) and confirm they exceed recommended levels. 
+
+---
 
 ## Anticipated Costs
 

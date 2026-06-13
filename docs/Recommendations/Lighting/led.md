@@ -12,6 +12,8 @@ Older lighting fixtures using incandescent, fluorescent, or high-intensity disch
 
 - 2.7142 (Utilize Higher Efficiency Lamps and/or Ballasts)
 
+---
+
 ## Savings Calculation
 
 Energy savings from efficient lighting fixtures result from reduced wattage to produce the same or better illumination levels. The savings depend on the wattage difference between baseline and proposed fixtures and annual operating hours.
@@ -64,7 +66,7 @@ where:
 
 - $\text{CF}_\text{winter}$ = winter coincidence factor (0.665)
 
-
+---
 
 ## Anticipated Costs
 
