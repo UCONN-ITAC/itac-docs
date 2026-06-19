@@ -43,7 +43,7 @@ These overarching items apply to the whole recommendation. The section checklist
 
 - [ ] **Correct variables** are used where needed
 
-- [ ] **No vague language** (avoid "approximately," "around," "about," "significant," etc.)
+- [ ] **No vague language** (avoid "approximately,to" "around," "about," "significant," etc.)
 
 !!! warning "When to Schedule a Virtual Meeting"
 
