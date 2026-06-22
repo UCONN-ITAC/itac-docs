@@ -14,8 +14,6 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  box-shadow: none !important;
-  border-bottom: none !important;
 }
 .md-header__inner {
   border-bottom: none !important;
@@ -91,6 +89,7 @@
   --itac-cobalt:        #013ecd; /* primary / brand anchor */
   --itac-cobalt-dark:   #012da0; /* hover / active on primary */
   --itac-cobalt-light:  #3a6ad9; /* lighter accent */
+  --itac-cobalt-on-dark: #3e78fd; /* cobalt lightened for dark backgrounds */
   --itac-cobalt-pale:   #d6e0fa; /* selected row, info background */
   --itac-cobalt-palest: #eef3fd; /* section background wash */
 
@@ -158,51 +157,59 @@
 }
 
 /* ==========================================================================
-   HEADER & TABS — same background as the page, cobalt accents
+   HEADER & TABS — translucent frosted-glass background (page color shows
+   through, blurred), cobalt tab accents. The divider is left to the base theme
+   (line under the tabs at top, under the header when scrolled). The frosted
+   blur no longer buries tooltips (lifted to z-index 50 below) or the divider
+   (handled by the base theme's scroll transition).
    ========================================================================== */
 .md-header,
 .md-tabs {
-  background-color: transparent !important;
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  background-color: color-mix(in srgb, var(--md-default-bg-color) 20%, transparent) !important;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+/* Keep Material tooltips above the sticky header (z-index 40) and tabs */
+.md-tooltip,
+.md-tooltip2 {
+  z-index: 50 !important;
 }
 
 [data-md-color-scheme="default"] .md-header,
 [data-md-color-scheme="default"] .md-tabs {
   color: var(--itac-ink) !important;
 }
-[data-md-color-scheme="default"] .md-header {
-  border-bottom: none;
-}
-[data-md-color-scheme="default"] .md-tabs {
-  border-bottom: 1px solid var(--itac-ink);
-}
-
 [data-md-color-scheme="default"] .md-tabs__link {
   color: var(--itac-gray-700) !important;
 }
-[data-md-color-scheme="default"] .md-tabs__link:hover,
-[data-md-color-scheme="default"] .md-tabs__link--active {
+[data-md-color-scheme="default"] .md-tabs__link:hover {
   color: var(--itac-cobalt) !important;
+}
+[data-md-color-scheme="default"] .md-tabs__item--active .md-tabs__link {
+  color: var(--itac-cobalt) !important;
+  font-weight: 700;
+}
+[data-md-color-scheme="default"] .md-tabs__item--active {
+  border-bottom-color: var(--itac-cobalt) !important;
 }
 
 [data-md-color-scheme="slate"] .md-header,
 [data-md-color-scheme="slate"] .md-tabs {
   color: var(--itac-offwhite) !important;
 }
-[data-md-color-scheme="slate"] .md-header {
-  border-bottom: none;
-}
-[data-md-color-scheme="slate"] .md-tabs {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 [data-md-color-scheme="slate"] .md-tabs__link {
   color: rgba(250, 251, 252, 0.7) !important;
 }
-[data-md-color-scheme="slate"] .md-tabs__link:hover,
-[data-md-color-scheme="slate"] .md-tabs__link--active {
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
   color: var(--itac-cobalt-on-dark) !important;
+}
+[data-md-color-scheme="slate"] .md-tabs__item--active .md-tabs__link {
+  color: var(--itac-cobalt-on-dark) !important;
+  font-weight: 700;
+}
+[data-md-color-scheme="slate"] .md-tabs__item--active {
+  border-bottom-color: var(--itac-cobalt-on-dark) !important;
 }
 
 /* ==========================================================================

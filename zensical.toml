@@ -261,6 +261,14 @@ custom_dir = "overrides"
 #
 favicon = "assets/favicon.svg"
 
+# With the "logo" option you can set your own image to use as the logo shown
+# in the header. The path provided must be relative to the "docs_dir".
+#
+# Read more:
+# - https://zensical.org/docs/setup/logo-and-icons/#logo
+#
+logo = "assets/favicon.svg"
+
 # Zensical supports more than 60 different languages. This means that the
 # labels and tooltips that Zensical's templates produce are translated.
 # The "language" option allows you to set the language used. This language
