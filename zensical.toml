@@ -27,7 +27,7 @@ site_name = "itac-docs"
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "A new project generated from the default template project."
+site_description = "A guide for industrial assessment personnel to create accurate, actionable recommendations. "
 
 # The site_author attribute. This is used in the HTML head element.
 #
@@ -37,7 +37,7 @@ site_author = "Southern New England Industrial Training and Assessment Center"
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-#site_url = "https://www.uconn-itac.github.io/docs"
+site_url = "https://industrialassessment.com"
 
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
